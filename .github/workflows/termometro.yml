@@ -29,11 +29,14 @@ jobs:
           GOOGLE_CREDENTIALS_PATH: /tmp/credentials.json
         run: echo "s" | python3 termometro.py
 
+      - name: Copiar HTML como index
+        run: cp docs/*.html docs/index.html
+
       - name: Commit y push del HTML generado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/*.html docs/*.csv
+          git add docs/
           git diff --cached --quiet && echo "Sin cambios" && exit 0
           git commit -m "chore: actualizar termómetro $(date +'%Y-%m-%d %H:%M UTC')"
           git push
