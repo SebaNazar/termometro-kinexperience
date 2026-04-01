@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/*.html output/*.csv
+          git add docs/*.html docs/*.csv
           git diff --cached --quiet && echo "Sin cambios" && exit 0
           git commit -m "chore: actualizar termómetro $(date +'%Y-%m-%d %H:%M UTC')"
           git push

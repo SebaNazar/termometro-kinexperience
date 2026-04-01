@@ -227,7 +227,7 @@ def calcular_grupales(resultados_staff: list[dict], config: dict) -> dict:
 # ── OUTPUT CSV ─────────────────────────────────────────────────────────────────
 
 def guardar_csv(resultados: list[dict], config: dict) -> str:
-    output_dir = os.path.join(os.path.dirname(__file__), "output")
+    output_dir = os.path.join(os.path.dirname(__file__), "docs")
     os.makedirs(output_dir, exist_ok=True)
 
     mes_num = str(MESES_ES[config["mes"]]).zfill(2)
@@ -377,7 +377,7 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
 </body>
 </html>"""
 
-    output_dir = os.path.join(os.path.dirname(__file__), "output")
+    output_dir = os.path.join(os.path.dirname(__file__), "docs")
     os.makedirs(output_dir, exist_ok=True)
     mes_num = str(MESES_ES[config["mes"]]).zfill(2)
     nombre  = f"termometro_{mes_num}{anio}.html"
