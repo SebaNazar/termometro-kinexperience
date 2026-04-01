@@ -333,20 +333,22 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
       background: #3b82f6; color: #fff; border-radius: 6px;
       font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }}
     .btn-actualizar:hover {{ background: #2563eb; }}
-    .header {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.25rem; }}
-    .header-logo {{ height: 60px; width: auto; flex-shrink: 0; object-fit: contain; }}
+    .header {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }}
+    .header-logo {{ height: 55px; width: auto; flex-shrink: 0; object-fit: contain; }}
     .header-text h1 {{ font-size: 1.8rem; }}
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="header-text"><h1>Termómetro Kinexperience</h1></div>
+    <div class="header-text">
+      <h1>Termómetro Kinexperience</h1>
+      <div class="subtitulo">{mes} {anio} &nbsp;·&nbsp; {config['dias_habiles']} días hábiles
+        {f'&nbsp;·&nbsp; {notas}' if notas else ''}
+      </div>
+    </div>
     <img class="header-logo"
       src="https://www.kinexperience.cl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLOGO-FONDO-OSCURO.81c302e1.png&w=128&q=75"
       alt="Kinexperience">
-  </div>
-  <div class="subtitulo">{mes} {anio} &nbsp;·&nbsp; {config['dias_habiles']} días hábiles
-    {f'&nbsp;·&nbsp; {notas}' if notas else ''}
   </div>
   <a class="btn-actualizar" href="https://github.com/SebaNazar/termometro-kinexperience/actions/workflows/termometro.yml" target="_blank" rel="noopener">Actualizar datos</a>
 
