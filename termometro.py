@@ -330,11 +330,9 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
     .notas {{ margin-top: 2rem; color: #64748b; font-size: 0.8rem; }}
     .footer {{ margin-top: 3rem; color: #334155; font-size: 0.7rem; text-align: center; }}
     .btn-actualizar {{ display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1.25rem;
-      background: #3b82f6; color: #fff; border: none; border-radius: 6px;
-      font-size: 0.85rem; cursor: pointer; transition: background 0.2s; }}
-    .btn-actualizar:hover:not(:disabled) {{ background: #2563eb; }}
-    .btn-actualizar:disabled {{ background: #1e40af; cursor: not-allowed; opacity: 0.7; }}
-    .btn-estado {{ margin-top: 0.4rem; font-size: 0.8rem; color: #94a3b8; min-height: 1.2em; }}
+      background: #3b82f6; color: #fff; border-radius: 6px;
+      font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }}
+    .btn-actualizar:hover {{ background: #2563eb; }}
   </style>
 </head>
 <body>
@@ -342,8 +340,7 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
   <div class="subtitulo">{mes} {anio} &nbsp;·&nbsp; {config['dias_habiles']} días hábiles
     {f'&nbsp;·&nbsp; {notas}' if notas else ''}
   </div>
-  <button class="btn-actualizar" id="btnActualizar" onclick="dispararWorkflow()">Actualizar datos</button>
-  <div class="btn-estado" id="btnEstado"></div>
+  <a class="btn-actualizar" href="https://github.com/SebaNazar/termometro-kinexperience/actions/workflows/termometro.yml" target="_blank" rel="noopener">Actualizar datos</a>
 
   {alerta_fechas}
 
@@ -395,43 +392,6 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
   <div class="notas">* TOE = Efectivas / Capacidad &nbsp;|&nbsp; TOP = Programadas / Capacidad &nbsp;|&nbsp; % Efectividad = Efectivas / Programadas (uso interno)</div>
   <div class="footer">Generado el {datetime.now().strftime('%d/%m/%Y %H:%M')} por termometro.py</div>
 
-  <script>
-    async function dispararWorkflow() {{
-      const btn    = document.getElementById('btnActualizar');
-      const estado = document.getElementById('btnEstado');
-      btn.disabled = true;
-      btn.textContent = 'Actualizando...';
-      estado.textContent = '';
-      try {{
-        const resp = await fetch(
-          'https://api.github.com/repos/SebaNazar/termometro-kinexperience/actions/workflows/termometro.yml/dispatches',
-          {{
-            method: 'POST',
-            headers: {{
-              'Authorization': 'Bearer %%WORKFLOW_TOKEN%%',
-              'Accept': 'application/vnd.github+json',
-              'X-GitHub-Api-Version': '2022-11-28',
-              'Content-Type': 'application/json',
-            }},
-            body: JSON.stringify({{ ref: 'main' }}),
-          }}
-        );
-        if (resp.status === 204) {{
-          btn.textContent = 'Actualizar datos';
-          estado.textContent = '¡Listo! Los datos se actualizarán en ~2 minutos.';
-        }} else {{
-          const txt = await resp.text();
-          btn.textContent = 'Actualizar datos';
-          estado.textContent = 'Error ' + resp.status + ': ' + txt;
-        }}
-      }} catch (e) {{
-        btn.textContent = 'Actualizar datos';
-        estado.textContent = 'Error de red: ' + e.message;
-      }} finally {{
-        btn.disabled = false;
-      }}
-    }}
-  </script>
 </body>
 </html>"""
 
