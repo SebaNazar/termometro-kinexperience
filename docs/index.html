@@ -28,10 +28,18 @@
       background: #3b82f6; color: #fff; border-radius: 6px;
       font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }
     .btn-actualizar:hover { background: #2563eb; }
+    .header { display: flex; align-items: center; gap: 12px; margin-bottom: 0.25rem; }
+    .header-logo { height: 36px; width: auto; flex-shrink: 0; object-fit: contain; }
+    .header-text h1 { font-size: 1.8rem; }
   </style>
 </head>
 <body>
-  <h1>Termómetro Kinexperience</h1>
+  <div class="header">
+    <img class="header-logo"
+      src="https://www.kinexperience.cl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLOGO-FONDO-OSCURO.81c302e1.png&w=128&q=75"
+      alt="Kinexperience">
+    <div class="header-text"><h1>Termómetro Kinexperience</h1></div>
+  </div>
   <div class="subtitulo">Marzo 2026 &nbsp;·&nbsp; 21 días hábiles
     &nbsp;·&nbsp; Preparar el terreno de retorno
   </div>
@@ -211,7 +219,7 @@
   </table>
 
   <div class="notas">* TOE = Efectivas / Capacidad &nbsp;|&nbsp; TOP = Programadas / Capacidad &nbsp;|&nbsp; % Efectividad = Efectivas / Programadas (uso interno)</div>
-  <div class="footer">Generado el 01/04/2026 21:25 por termometro.py</div>
+  <div class="footer">Generado el 01/04/2026 21:30 por termometro.py</div>
 
 </body>
 </html>
