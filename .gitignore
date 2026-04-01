@@ -1,0 +1,6 @@
+.env
+.DS_Store
+.claude/
+SKILL.md
+__pycache__/
+*.pyc
