@@ -32,6 +32,9 @@ jobs:
       - name: Copiar HTML como index
         run: cp $(ls docs/*.html | grep -v index.html) docs/index.html
 
+      - name: Inyectar token en el botón de actualización
+        run: sed -i "s|%%WORKFLOW_TOKEN%%|${{ secrets.WORKFLOW_TOKEN }}|g" docs/index.html
+
       - name: Commit y push del HTML generado
         run: |
           git config user.name "github-actions[bot]"
