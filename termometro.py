@@ -9,6 +9,8 @@ import json
 from datetime import datetime, date, timedelta
 import calendar
 
+import unicodedata
+
 import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
@@ -57,6 +59,16 @@ def cargar_registro(gc: gspread.Client) -> pd.DataFrame:
     datos = ws.get_all_records()
     df = pd.DataFrame(datos)
     df.columns = df.columns.str.strip()  # elimina espacios en nombres de columna
+    if COL_PACIENTE in df.columns:
+        df[COL_PACIENTE] = (
+            df[COL_PACIENTE]
+            .astype(str)
+            .str.strip()
+            .str.upper()
+            .apply(lambda x: unicodedata.normalize("NFD", x)
+                             .encode("ascii", "ignore")
+                             .decode("ascii"))
+        )
     print(f"  {len(df)} filas cargadas.")
     return df
 
