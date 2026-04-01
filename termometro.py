@@ -11,8 +11,7 @@ import calendar
 
 import pandas as pd
 import gspread
-from google.oauth2.credentials import Credentials
-from google.auth.transport.requests import Request
+from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -36,40 +35,16 @@ KINE_EXCLUIDO    = "Mauricio Arce"   # socio, nunca entra en métricas grupales
 # ── CONEXIÓN ───────────────────────────────────────────────────────────────────
 
 def conectar() -> gspread.Client:
-    refresh_token_env = os.getenv("GOOGLE_REFRESH_TOKEN")
-    if refresh_token_env:
-        creds = Credentials(
-            token=None,
-            refresh_token=refresh_token_env,
-            token_uri="https://oauth2.googleapis.com/token",
-            client_id=os.getenv("GOOGLE_CLIENT_ID"),
-            client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
-            scopes=[
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/drive",
-            ],
-        )
-    else:
-        token_path = os.getenv("TOKEN_PATH")
-        if not token_path or not os.path.exists(token_path):
-            sys.exit("ERROR: TOKEN_PATH no encontrado. Revisa tu .env")
-        with open(token_path) as f:
-            token_data = json.load(f)
-        creds = Credentials(
-            token=token_data.get("access_token"),
-            refresh_token=token_data.get("refresh_token"),
-            token_uri="https://oauth2.googleapis.com/token",
-            client_id=os.getenv("CLIENT_ID"),
-            client_secret=os.getenv("CLIENT_SECRET"),
-            scopes=[
-                "https://www.googleapis.com/auth/spreadsheets",
-                "https://www.googleapis.com/auth/drive",
-            ],
-        )
-
-    if creds.expired or not creds.valid:
-        creds.refresh(Request())
-
+    credentials_path = os.getenv("GOOGLE_CREDENTIALS_PATH")
+    if not credentials_path or not os.path.exists(credentials_path):
+        sys.exit("ERROR: GOOGLE_CREDENTIALS_PATH no encontrado. Revisa tu .env")
+    creds = Credentials.from_service_account_file(
+        credentials_path,
+        scopes=[
+            "https://www.googleapis.com/auth/spreadsheets",
+            "https://www.googleapis.com/auth/drive",
+        ],
+    )
     return gspread.authorize(creds)
 
 
