@@ -30,7 +30,7 @@ jobs:
         run: echo "s" | python3 termometro.py
 
       - name: Copiar HTML como index
-        run: cp docs/*.html docs/index.html
+        run: cp $(ls docs/*.html | grep -v index.html) docs/index.html
 
       - name: Commit y push del HTML generado
         run: |
