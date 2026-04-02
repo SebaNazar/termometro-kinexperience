@@ -4,3 +4,5 @@
 SKILL.md
 __pycache__/
 *.pyc
+docs/resumen_*.csv
+docs/termometro_*.html
