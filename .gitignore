@@ -6,3 +6,8 @@ __pycache__/
 *.pyc
 docs/resumen_*.csv
 docs/termometro_*.html
+docs/borrador_contabilidad_*.txt
+docs/refuerzo_*.txt
+CLAUDE.md
+.Rhistory
+memory/
