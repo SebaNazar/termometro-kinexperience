@@ -1,0 +1,129 @@
+{
+  "potencial_total": 944.0,
+  "potencial_top": 719.0,
+  "toe_grupal": 73.62,
+  "top_grupal": 76.17,
+  "trayectoria_mes_actual": {
+    "mes": "Marzo",
+    "toe": 73.62
+  },
+  "kines": [
+    {
+      "nombre": "Guillermo Silva",
+      "pacientes": 20,
+      "evaluaciones": 2,
+      "realizadas": 110,
+      "efectivas": 115.0,
+      "suspendidas": 15,
+      "recuperadas": 3,
+      "canceladas": 12,
+      "top": 115.45,
+      "toe": 104.55,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "José Aguilar",
+      "pacientes": 15,
+      "evaluaciones": 0,
+      "realizadas": 100,
+      "efectivas": 102.0,
+      "suspendidas": 4,
+      "recuperadas": 2,
+      "canceladas": 2,
+      "top": 94.55,
+      "toe": 92.73,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Katalina Correa",
+      "pacientes": 17,
+      "evaluaciones": 3,
+      "realizadas": 92,
+      "efectivas": 95.0,
+      "suspendidas": 5,
+      "recuperadas": 0,
+      "canceladas": 5,
+      "top": 90.91,
+      "toe": 86.36,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Daniela Jaque",
+      "pacientes": 13,
+      "evaluaciones": 0,
+      "realizadas": 88,
+      "efectivas": 94.0,
+      "suspendidas": 10,
+      "recuperadas": 6,
+      "canceladas": 4,
+      "top": 89.09,
+      "toe": 85.45,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Andrés Mardones",
+      "pacientes": 11,
+      "evaluaciones": 1,
+      "realizadas": 55,
+      "efectivas": 60.0,
+      "suspendidas": 1,
+      "recuperadas": 4,
+      "canceladas": -3,
+      "top": 76.0,
+      "toe": 80.0,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Sebastián de la Peña",
+      "pacientes": 14,
+      "evaluaciones": 3,
+      "realizadas": 79,
+      "efectivas": 83.0,
+      "suspendidas": 6,
+      "recuperadas": 1,
+      "canceladas": 5,
+      "top": 80.0,
+      "toe": 75.45,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 10,
+      "evaluaciones": 2,
+      "realizadas": 66,
+      "efectivas": 72.0,
+      "suspendidas": 3,
+      "recuperadas": 4,
+      "canceladas": -1,
+      "top": 64.55,
+      "toe": 65.45,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Francisca Campos",
+      "pacientes": 17,
+      "evaluaciones": 2,
+      "realizadas": 49,
+      "efectivas": 51.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 46.36,
+      "toe": 46.36,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Patricio Orrego",
+      "pacientes": 15,
+      "evaluaciones": 0,
+      "realizadas": 23,
+      "efectivas": 23.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 23.23,
+      "toe": 23.23,
+      "tendencia": "→"
+    }
+  ]
+}
