@@ -1,9 +1,65 @@
 {
-  "mes": "Marzo 2026",
-  "frase_motivacional": "Preparar el terreno de retorno",
-  "meta_toe_mes": 74,
-  "meta_top_mes": 76,
-  "meta_toe_siguiente": 74,
-  "meta_top_siguiente": 76,
-  "meta_siguiente_nombre": "Abril 2026"
+  "mes": "Marzo",
+  "año": 2026,
+  "dias_habiles": 22,
+  "kines_staff": [
+    "Sebastián de la Peña",
+    "Patricio Orrego",
+    "Katalina Correa",
+    "José Aguilar",
+    "Guillermo Silva",
+    "Daniela Jaque",
+    "Andrés Mardones",
+    "Marcia Reveco",
+    "Francisca Campos"
+  ],
+  "kines_refuerzo": [
+    "Fernanda Pino",
+    "Francisco Vásquez",
+    "Marcelo Lagos"
+  ],
+  "excepciones_capacidad": {
+    "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 },
+    "Andrés Mardones": { "tipo": "fecha_hasta", "fecha": "2026-03-20" }
+  },
+  "meta_TOE": 0.74,
+  "meta_TOP": 0.76,
+  "notas_mes": "",
+  "presentacion": {
+    "mes_label": "Marzo 2026",
+    "frase_motivacional": "Preparar el terreno de retorno",
+    "meta_toe_siguiente": 77,
+    "meta_top_siguiente": 79,
+    "meta_siguiente_nombre": "Abril 2026"
+  },
+  "pagos": {
+    "rut_empresa": "77.036.223-7",
+    "sueldo_base_kine_nuevo": 640000,
+    "bono_bencina_por_sesion": 0,
+    "valor_sesion_refuerzo_bruto": 21053,
+    "porcentaje_boleta_honorarios": 0.1525,
+    "trimestre_actual": "T2-2026",
+    "mes_cierre_trimestre": "Mayo",
+    "toe_grupal_meses_trimestre": [0.0, 0.0, 0.0],
+    "perfiles_especiales": {
+      "Patricio Orrego": {
+        "perfil": "kine_antiguo",
+        "sueldo_base_referencial": 1096116
+      },
+      "Francisca Campos": {
+        "perfil": "kine_antiguo",
+        "sueldo_base_referencial": 946116
+      },
+      "Mauricio Arce": {
+        "perfil": "mauricio",
+        "sueldo_fijo_referencial": 1900000
+      },
+      "Sebastián Nazar": {
+        "perfil": "sebastian",
+        "sueldo_fijo_referencial": 2500000
+      }
+    },
+    "bonos_bencina_refuerzo": {},
+    "notas_manuales": {}
+  }
 }

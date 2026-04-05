@@ -6,33 +6,17 @@ const path = require("path");
 // ── Configuración ──────────────────────────────────────────────
 const config = JSON.parse(fs.readFileSync("config_mes.json", "utf8"));
 
-// Datos hardcodeados para prueba inicial (luego vendrán del Sheet)
-const datos = {
-  potencial_total: 806,
-  potencial_top: 487,
-  kines: [
-    { nombre: "Patricio Orrego",    pacientes: 19, evaluaciones: 3, top: 92.22, toe: 83.3, tendencia: "↓", suspendidas: 8,  recuperadas: 0,  canceladas: 8,  realizadas: 75,  efectivas: 75 },
-    { nombre: "José Aguilar",       pacientes: 13, evaluaciones: 0, top: 92.00, toe: 94.0, tendencia: "↑", suspendidas: 3,  recuperadas: 5,  canceladas: -2, realizadas: 94,  efectivas: 94 },
-    { nombre: "Mauricio Arce",      pacientes: 2,  evaluaciones: 0, top: 100.0, toe: 100.0,tendencia: "↓", suspendidas: 0,  recuperadas: 0,  canceladas: 0,  realizadas: 16,  efectivas: 16 },
-    { nombre: "Guillermo Silva",    pacientes: 14, evaluaciones: 0, top: 71.00, toe: 68.0, tendencia: "↓", suspendidas: 8,  recuperadas: 5,  canceladas: 3,  realizadas: 68,  efectivas: 68 },
-    { nombre: "Katalina Correa",    pacientes: 13, evaluaciones: 2, top: 54.00, toe: 51.0, tendencia: "↑", suspendidas: 3,  recuperadas: 0,  canceladas: 3,  realizadas: 51,  efectivas: 51 },
-    { nombre: "Daniela Jaque",      pacientes: 12, evaluaciones: 3, top: 54.00, toe: 56.0, tendencia: "↓", suspendidas: 2,  recuperadas: 4,  canceladas: -2, realizadas: 56,  efectivas: 56 },
-    { nombre: "Marcia Reveco",      pacientes: 9,  evaluaciones: 0, top: 37.00, toe: 38.0, tendencia: "↑", suspendidas: 6,  recuperadas: 7,  canceladas: -1, realizadas: 38,  efectivas: 38 },
-    { nombre: "Sebastián de la Peña",pacientes:10, evaluaciones: 1, top: 50.00, toe: 46.0, tendencia: "↓", suspendidas: 7,  recuperadas: 3,  canceladas: 4,  realizadas: 46,  efectivas: 46 },
-  ],
-  toe_grupal: 66.7,
-  top_grupal: 69.4,
-  trayectoria: [
-    { mes: "Ene-25", toe: 64.72 }, { mes: "Feb-25", toe: 50.56 },
-    { mes: "Mar-25", toe: 69.31 }, { mes: "Abr-25", toe: 67.08 },
-    { mes: "May-25", toe: 76.97 }, { mes: "Jun-25", toe: 81.05 },
-    { mes: "Jul-25", toe: 92.31 }, { mes: "Ago-25", toe: 89.08 },
-    { mes: "Sep-25", toe: 92.15 }, { mes: "Oct-25", toe: 94.26 },
-    { mes: "Nov-25", toe: 94.61 }, { mes: "Dic-25", toe: 91.11 },
-    { mes: "Ene-26", toe: 73.97 }, { mes: "Feb-26", toe: 58.93 },
-    { mes: "Mar-26", toe: 66.7  },
-  ],
-};
+const datos = JSON.parse(fs.readFileSync("docs/datos_presentacion.json", "utf8"));
+
+// ── Trayectoria histórica ─────────────────────────────────────
+const trayectoriaHistorica = [
+  {mes:"Dic-24",toe:67.55},{mes:"Ene-25",toe:64.72},{mes:"Feb-25",toe:50.56},
+  {mes:"Mar-25",toe:69.31},{mes:"Abr-25",toe:67.08},{mes:"May-25",toe:76.97},
+  {mes:"Jun-25",toe:81.05},{mes:"Jul-25",toe:92.31},{mes:"Ago-25",toe:89.08},
+  {mes:"Sep-25",toe:92.15},{mes:"Oct-25",toe:94.26},{mes:"Nov-25",toe:94.61},
+  {mes:"Dic-25",toe:91.11},
+];
+const trayectoria = [...trayectoriaHistorica, datos.trayectoria_mes_actual];
 
 // ── Colores Kinexperience ──────────────────────────────────────
 const C = {
@@ -89,7 +73,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   // Título
   s.addText("Termómetro", { x: 0.5, y: 2.4, w: 8, h: 1.4, fontSize: 72, bold: true, color: C.blanco, fontFace: "Calibri" });
   s.addText("Kinexperience", { x: 0.5, y: 3.7, w: 8, h: 0.9, fontSize: 40, bold: false, color: C.azul, fontFace: "Calibri" });
-  s.addText(config.mes, { x: 0.5, y: 4.6, w: 8, h: 0.6, fontSize: 22, color: C.verde, fontFace: "Calibri" });
+  s.addText(config.presentacion.mes_label, { x: 0.5, y: 4.6, w: 8, h: 0.6, fontSize: 22, color: C.verde, fontFace: "Calibri" });
 
   // Línea decorativa
   s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 5.5, w: 4, h: 0.05, fill: { color: C.verde }, line: { color: C.verde } });
@@ -100,38 +84,37 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   let s = pres.addSlide();
   s.background = { color: C.palido };
 
-  s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
   s.addText("El mes en números", { x: 0.5, y: 0.3, w: 9, h: 0.7, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
 
   // Tarjeta 1 — Capacidad del equipo
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.3, w: 3.8, h: 3.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
-  s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.3, w: 3.8, h: 0.18, fill: { color: C.marino }, line: { color: C.marino } });
-  s.addText("CAPACIDAD DEL EQUIPO", { x: 0.5, y: 1.3, w: 3.8, h: 0.18, fontSize: 9, bold: true, color: C.blanco, align: "center", fontFace: "Calibri", margin: 0 });
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.8, w: 3.8, h: 3.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
+  s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: 1.8, w: 3.8, h: 0.18, fill: { color: C.marino }, line: { color: C.marino } });
+  s.addText("CAPACIDAD DEL EQUIPO", { x: 0.5, y: 1.8, w: 3.8, h: 0.18, fontSize: 9, bold: true, color: C.blanco, align: "center", fontFace: "Calibri", margin: 0 });
   s.addText(datos.potencial_total.toString(), { x: 0.5, y: 2.0, w: 3.8, h: 1.6, fontSize: 80, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
   s.addText("sesiones posibles este mes", { x: 0.5, y: 3.6, w: 3.8, h: 0.5, fontSize: 11, color: C.gris, align: "center", fontFace: "Calibri" });
 
   // Tarjeta 2 — Sesiones programadas
-  s.addShape(pres.shapes.RECTANGLE, { x: 4.75, y: 1.3, w: 3.8, h: 3.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
-  s.addShape(pres.shapes.RECTANGLE, { x: 4.75, y: 1.3, w: 3.8, h: 0.18, fill: { color: C.azul }, line: { color: C.azul } });
-  s.addText("SESIONES PROGRAMADAS (TOP)", { x: 4.75, y: 1.3, w: 3.8, h: 0.18, fontSize: 9, bold: true, color: C.blanco, align: "center", fontFace: "Calibri", margin: 0 });
+  s.addShape(pres.shapes.RECTANGLE, { x: 4.75, y: 1.8, w: 3.8, h: 3.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
+  s.addShape(pres.shapes.RECTANGLE, { x: 4.75, y: 1.8, w: 3.8, h: 0.18, fill: { color: C.azul }, line: { color: C.azul } });
+  s.addText("SESIONES PROGRAMADAS (TOP)", { x: 4.75, y: 1.8, w: 3.8, h: 0.18, fontSize: 9, bold: true, color: C.blanco, align: "center", fontFace: "Calibri", margin: 0 });
   s.addText(datos.potencial_top.toString(), { x: 4.75, y: 2.0, w: 3.8, h: 1.6, fontSize: 80, bold: true, color: C.azul, align: "center", fontFace: "Calibri" });
   s.addText("sesiones agendadas", { x: 4.75, y: 3.6, w: 3.8, h: 0.5, fontSize: 11, color: C.gris, align: "center", fontFace: "Calibri" });
 
   // Tarjeta 3 — Frase del mes
-  s.addShape(pres.shapes.RECTANGLE, { x: 9.0, y: 1.3, w: 3.8, h: 3.5, fill: { color: C.marino }, line: { color: C.marino }, shadow: makeShadow() });
+  s.addShape(pres.shapes.RECTANGLE, { x: 9.0, y: 1.8, w: 3.8, h: 3.5, fill: { color: C.marino }, line: { color: C.marino }, shadow: makeShadow() });
   s.addText("META DEL MES", { x: 9.0, y: 1.6, w: 3.8, h: 0.4, fontSize: 11, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
-  s.addText(config.frase_motivacional, { x: 9.0, y: 2.2, w: 3.8, h: 2.0, fontSize: 22, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri" });
+  s.addText(config.presentacion.frase_motivacional, { x: 9.0, y: 2.2, w: 3.8, h: 2.0, fontSize: 22, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri" });
+  s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
 }
 
 // ── SLIDE 3: Tabla del equipo ─────────────────────────────────
 {
   let s = pres.addSlide();
   s.background = { color: C.palido };
-  s.addImage({ path: logoClaro, x: 11.8, y: 0.2, w: 1.0, h: 1.0 });
   s.addText("Tabla del equipo", { x: 0.5, y: 0.2, w: 9, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
-  s.addText(config.mes, { x: 0.5, y: 0.75, w: 9, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
+  s.addText(config.presentacion.mes_label, { x: 0.5, y: 0.75, w: 9, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
-  const meta = config.meta_toe_mes;
+  const meta = config.meta_TOE * 100;
   // 11 columnas en 12.7": Kine(2.5) + Pacientes(1.1) + Eval(1.1) + Realizadas(1.0) + Susp(1.05) + Recup(1.05) + Cancel(1.0) + Efectivas(1.0) + TOP(0.95) + TOE(0.95) + Tendencia(1.0)
   const colW = [2.5, 1.1, 1.1, 1.0, 1.05, 1.05, 1.0, 1.0, 0.95, 0.95, 1.0];
   const hdr = { fill: { color: C.marino }, color: C.blanco, bold: true, fontSize: 8.5, fontFace: "Calibri", align: "center", valign: "middle" };
@@ -172,7 +155,8 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
     ]);
   });
 
-  s.addTable(rows, { x: 0.3, y: 1.15, w: 12.7, colW, rowH: 0.52, border: { pt: 0.5, color: "E2E8F0" } });
+  s.addTable(rows, { x: 0.3, y: 1.6, w: 12.7, colW, rowH: 0.52, border: { pt: 0.5, color: "E2E8F0" } });
+  s.addImage({ path: logoClaro, x: 11.8, y: 0.2, w: 1.0, h: 1.0 });
 }
 
 // ── SLIDE 4: TOP vs TOE individual ───────────────────────────
@@ -181,7 +165,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.background = { color: C.palido };
   s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
   s.addText("Programación vs Efectivas", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
-  s.addText("TOP vs TOE · " + config.mes, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
+  s.addText("TOP vs TOE · " + config.presentacion.mes_label, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
   const kinesOrdenados = [...datos.kines].sort((a, b) => b.toe - a.toe);
   s.addChart(pres.charts.BAR, [
@@ -215,7 +199,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.background = { color: C.palido };
   s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
   s.addText("Evolución TOE individual", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
-  s.addText("Mes anterior vs " + config.mes, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
+  s.addText("Mes anterior vs " + config.presentacion.mes_label, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
   // Datos enero como "mes anterior" para prueba
   const anterior = { "Patricio Orrego": 97.6, "José Aguilar": 100.0, "Mauricio Arce": 106.3,
@@ -225,7 +209,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   const kinesOrdenados = [...datos.kines].sort((a, b) => b.toe - a.toe);
   s.addChart(pres.charts.BAR, [
     { name: "Mes anterior", labels: kinesOrdenados.map(k => k.nombre), values: kinesOrdenados.map(k => (anterior[k.nombre] || 0) / 100) },
-    { name: config.mes,     labels: kinesOrdenados.map(k => k.nombre), values: kinesOrdenados.map(k => k.toe / 100) },
+    { name: config.presentacion.mes_label,     labels: kinesOrdenados.map(k => k.nombre), values: kinesOrdenados.map(k => k.toe / 100) },
   ], {
     x: 0.4, y: 1.5, w: 12.5, h: 5.6,
     barDir: "bar",
@@ -254,7 +238,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.background = { color: C.palido };
   s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
   s.addText("Suspendidas y Recuperadas", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
-  s.addText(config.mes + "  ·  Valor negativo = recuperaciones superan suspensiones", { x: 0.5, y: 0.75, w: 12, h: 0.35, fontSize: 11, color: C.gris, fontFace: "Calibri" });
+  s.addText(config.presentacion.mes_label + "  ·  Valor negativo = recuperaciones superan suspensiones", { x: 0.5, y: 0.75, w: 12, h: 0.35, fontSize: 11, color: C.gris, fontFace: "Calibri" });
 
   const nombres = datos.kines.map(k => k.nombre.split(" ")[0]);
 
@@ -292,7 +276,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.background = { color: C.palido };
   s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
   s.addText("Distribución de carga", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
-  s.addText("Sesiones efectivas por kine · " + config.mes, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
+  s.addText("Sesiones efectivas por kine · " + config.presentacion.mes_label, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
   const kinesOrdenados = [...datos.kines].sort((a, b) => b.efectivas - a.efectivas);
   const totalSesiones = kinesOrdenados.reduce((s, k) => s + k.efectivas, 0);
@@ -320,7 +304,60 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   });
 }
 
-// ── SLIDE 8: Trayectoria histórica ───────────────────────────
+// ── SLIDE 8: Meta del mes (primero la meta, sin resultado) ────
+{
+  let s = pres.addSlide();
+  s.background = { color: C.marino };
+
+  s.addImage({ path: logoBlanco, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
+  s.addText("Meta " + config.presentacion.mes_label, { x: 0.5, y: 0.4, w: 9, h: 0.7, fontSize: 32, bold: true, color: C.blanco, fontFace: "Calibri" });
+
+  // Tarjeta TOE meta
+  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 4.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
+  s.addText("TOE", { x: 1.5, y: 1.4, w: 4.2, h: 0.6, fontSize: 18, bold: true, color: C.marino, align: "center", valign: "middle", fontFace: "Calibri" });
+  s.addText((config.meta_TOE * 100) + "%", { x: 1.5, y: 2.2, w: 4.2, h: 2.5, fontSize: 90, bold: true, color: C.azul, align: "center", fontFace: "Calibri" });
+  s.addText("tasa de ocupación efectiva", { x: 1.5, y: 4.8, w: 4.2, h: 0.5, fontSize: 11, color: C.gris, align: "center", fontFace: "Calibri" });
+
+  // Tarjeta TOP meta
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 4.5, fill: { color: C.marino }, line: { color: C.azul, pt: 2 }, shadow: makeShadow() });
+  s.addText("TOP", { x: 7.6, y: 1.4, w: 4.2, h: 0.6, fontSize: 18, bold: true, color: C.verde, align: "center", valign: "middle", fontFace: "Calibri" });
+  s.addText((config.meta_TOP * 100) + "%", { x: 7.6, y: 2.2, w: 4.2, h: 2.5, fontSize: 90, bold: true, color: C.blanco, align: "center", fontFace: "Calibri" });
+  s.addText("tasa de ocupación programada", { x: 7.6, y: 4.8, w: 4.2, h: 0.5, fontSize: 11, color: C.verde, align: "center", fontFace: "Calibri" });
+}
+
+// ── SLIDE 9: Resultado del mes (el reveal) ────────────────────
+{
+  let s = pres.addSlide();
+  s.background = { color: C.marino };
+
+  const toeOk  = datos.toe_grupal  >= config.meta_TOE * 100;
+  const topOk  = datos.top_grupal  >= config.meta_TOP * 100;
+
+  s.addImage({ path: logoBlanco, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
+  s.addText("Resultado " + config.presentacion.mes_label, { x: 0.5, y: 0.4, w: 9, h: 0.7, fontSize: 32, bold: true, color: C.blanco, fontFace: "Calibri" });
+
+  // Tarjeta TOE resultado
+  const toeBg = toeOk ? C.verdeOk : C.rojo;
+  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 4.8, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
+  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 0.5, fill: { color: toeBg }, line: { color: toeBg } });
+  s.addText("TOE", { x: 1.5, y: 1.4, w: 4.2, h: 0.5, fontSize: 16, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri", margin: 0 });
+  s.addText(datos.toe_grupal.toFixed(1) + "%", { x: 1.5, y: 2.1, w: 4.2, h: 2.2, fontSize: 86, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
+  s.addText(toeOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.meta_TOE * 100 + "%)", {
+    x: 1.5, y: 4.4, w: 4.2, h: 0.6, fontSize: 13, bold: true, color: toeOk ? C.verdeOk : C.rojo, align: "center", fontFace: "Calibri"
+  });
+
+  // Tarjeta TOP resultado
+  const topBg = topOk ? C.verdeOk : C.rojo;
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 4.8, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
+  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fill: { color: topBg }, line: { color: topBg } });
+  s.addText("TOP", { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fontSize: 16, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri", margin: 0 });
+  s.addText(datos.top_grupal.toFixed(1) + "%", { x: 7.6, y: 2.1, w: 4.2, h: 2.2, fontSize: 86, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
+  s.addText(topOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.presentacion.meta_top_mes + "%)", {
+    x: 7.6, y: 4.4, w: 4.2, h: 0.6, fontSize: 13, bold: true, color: topOk ? C.verdeOk : C.rojo, align: "center", fontFace: "Calibri"
+  });
+}
+
+// ── SLIDE 10: Trayectoria histórica ──────────────────────────
 {
   let s = pres.addSlide();
   s.background = { color: C.palido };
@@ -329,7 +366,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.addText("TOE mensual del equipo", { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
   s.addChart(pres.charts.LINE, [
-    { name: "TOE", labels: datos.trayectoria.map(d => d.mes), values: datos.trayectoria.map(d => d.toe / 100) },
+    { name: "TOE", labels: trayectoria.map(d => d.mes), values: trayectoria.map(d => d.toe / 100) },
   ], {
     x: 0.4, y: 1.5, w: 12.5, h: 5.6,
     lineSize: 3,
@@ -352,7 +389,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   });
 }
 
-// ── SLIDE 9: Zoom — Últimos meses ────────────────────────────
+// ── SLIDE 11: Zoom — Últimos meses ───────────────────────────
 {
   let s = pres.addSlide();
   s.background = { color: C.palido };
@@ -370,7 +407,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
     {
       name: "2025-26",
       labels: zoomLabels,
-      values: [91.11 / 100, 73.97 / 100, 58.93 / 100, 66.7 / 100],
+      values: [91.11 / 100, 73.97 / 100, 58.93 / 100, datos.trayectoria_mes_actual.toe / 100],
     },
   ], {
     x: 0.4, y: 1.5, w: 12.5, h: 5.6,
@@ -396,59 +433,6 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   });
 }
 
-// ── SLIDE 10: Meta del mes (primero la meta, sin resultado) ───
-{
-  let s = pres.addSlide();
-  s.background = { color: C.marino };
-
-  s.addImage({ path: logoBlanco, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
-  s.addText("Meta " + config.mes, { x: 0.5, y: 0.4, w: 9, h: 0.7, fontSize: 32, bold: true, color: C.blanco, fontFace: "Calibri" });
-
-  // Tarjeta TOE meta
-  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 4.5, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
-  s.addText("TOE", { x: 1.5, y: 1.4, w: 4.2, h: 0.6, fontSize: 18, bold: true, color: C.marino, align: "center", valign: "middle", fontFace: "Calibri" });
-  s.addText(config.meta_toe_mes + "%", { x: 1.5, y: 2.2, w: 4.2, h: 2.5, fontSize: 90, bold: true, color: C.azul, align: "center", fontFace: "Calibri" });
-  s.addText("tasa de ocupación efectiva", { x: 1.5, y: 4.8, w: 4.2, h: 0.5, fontSize: 11, color: C.gris, align: "center", fontFace: "Calibri" });
-
-  // Tarjeta TOP meta
-  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 4.5, fill: { color: C.marino }, line: { color: C.azul, pt: 2 }, shadow: makeShadow() });
-  s.addText("TOP", { x: 7.6, y: 1.4, w: 4.2, h: 0.6, fontSize: 18, bold: true, color: C.verde, align: "center", valign: "middle", fontFace: "Calibri" });
-  s.addText(config.meta_top_mes + "%", { x: 7.6, y: 2.2, w: 4.2, h: 2.5, fontSize: 90, bold: true, color: C.blanco, align: "center", fontFace: "Calibri" });
-  s.addText("tasa de ocupación programada", { x: 7.6, y: 4.8, w: 4.2, h: 0.5, fontSize: 11, color: C.verde, align: "center", fontFace: "Calibri" });
-}
-
-// ── SLIDE 11: Resultado del mes (el reveal) ───────────────────
-{
-  let s = pres.addSlide();
-  s.background = { color: C.marino };
-
-  const toeOk  = datos.toe_grupal  >= config.meta_toe_mes;
-  const topOk  = datos.top_grupal  >= config.meta_top_mes;
-
-  s.addImage({ path: logoBlanco, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
-  s.addText("Resultado " + config.mes, { x: 0.5, y: 0.4, w: 9, h: 0.7, fontSize: 32, bold: true, color: C.blanco, fontFace: "Calibri" });
-
-  // Tarjeta TOE resultado
-  const toeBg = toeOk ? C.verdeOk : C.rojo;
-  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 4.8, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
-  s.addShape(pres.shapes.RECTANGLE, { x: 1.5, y: 1.4, w: 4.2, h: 0.5, fill: { color: toeBg }, line: { color: toeBg } });
-  s.addText("TOE", { x: 1.5, y: 1.4, w: 4.2, h: 0.5, fontSize: 16, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri", margin: 0 });
-  s.addText(datos.toe_grupal.toFixed(1) + "%", { x: 1.5, y: 2.1, w: 4.2, h: 2.2, fontSize: 86, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
-  s.addText(toeOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.meta_toe_mes + "%)", {
-    x: 1.5, y: 4.4, w: 4.2, h: 0.6, fontSize: 13, bold: true, color: toeOk ? C.verdeOk : C.rojo, align: "center", fontFace: "Calibri"
-  });
-
-  // Tarjeta TOP resultado
-  const topBg = topOk ? C.verdeOk : C.rojo;
-  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 4.8, fill: { color: C.blanco }, line: { color: C.blanco }, shadow: makeShadow() });
-  s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fill: { color: topBg }, line: { color: topBg } });
-  s.addText("TOP", { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fontSize: 16, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri", margin: 0 });
-  s.addText(datos.top_grupal.toFixed(1) + "%", { x: 7.6, y: 2.1, w: 4.2, h: 2.2, fontSize: 86, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
-  s.addText(topOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.meta_top_mes + "%)", {
-    x: 7.6, y: 4.4, w: 4.2, h: 0.6, fontSize: 13, bold: true, color: topOk ? C.verdeOk : C.rojo, align: "center", fontFace: "Calibri"
-  });
-}
-
 // ── SLIDE 12: Meta próximo mes ────────────────────────────────
 {
   let s = pres.addSlide();
@@ -459,12 +443,12 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
 
   s.addImage({ path: logoBlanco, x: 11.8, y: 0.3, w: 1.3, h: 1.3 });
   s.addText("Meta", { x: 0.5, y: 0.5, w: 6, h: 0.8, fontSize: 42, bold: true, color: C.blanco, fontFace: "Calibri" });
-  s.addText(config.meta_siguiente_nombre, { x: 0.5, y: 1.2, w: 6, h: 0.7, fontSize: 30, color: C.azul, fontFace: "Calibri" });
+  s.addText(config.presentacion.meta_siguiente_nombre, { x: 0.5, y: 1.2, w: 6, h: 0.7, fontSize: 30, color: C.azul, fontFace: "Calibri" });
 
-  s.addText(config.meta_toe_siguiente + "%", { x: 1.0, y: 2.2, w: 4.5, h: 3.0, fontSize: 110, bold: true, color: C.azul, align: "center", fontFace: "Calibri" });
+  s.addText(config.presentacion.meta_toe_siguiente + "%", { x: 1.0, y: 2.2, w: 4.5, h: 3.0, fontSize: 110, bold: true, color: C.azul, align: "center", fontFace: "Calibri" });
   s.addText("TOE", { x: 1.0, y: 5.1, w: 4.5, h: 0.6, fontSize: 18, color: C.gris, align: "center", fontFace: "Calibri" });
 
-  s.addText(config.meta_top_siguiente + "%", { x: 7.3, y: 2.2, w: 4.5, h: 3.0, fontSize: 110, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
+  s.addText(config.presentacion.meta_top_siguiente + "%", { x: 7.3, y: 2.2, w: 4.5, h: 3.0, fontSize: 110, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
   s.addText("TOP", { x: 7.3, y: 5.1, w: 4.5, h: 0.6, fontSize: 18, color: C.gris, align: "center", fontFace: "Calibri" });
 }
 
@@ -478,7 +462,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
 }
 
 // ── Exportar ───────────────────────────────────────────────────
-const nombreArchivo = `Termometro_${config.mes.replace(/ /g, "_")}.pptx`;
+const nombreArchivo = `Termometro_${config.presentacion.mes_label.replace(/ /g, "_")}.pptx`;
 pres.writeFile({ fileName: nombreArchivo }).then(() => {
   console.log(`\n✅ Presentación generada: ${nombreArchivo}`);
 });

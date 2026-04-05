@@ -415,6 +415,69 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
     return ruta
 
 
+# ── EXPORT JSON PRESENTACIÓN ──────────────────────────────────────────────────
+
+def exportar_json_presentacion(resultados_kines: list[dict], resumen_grupal: dict, config: dict) -> str:
+    potencial_total = sum(r["capacidad"]   for r in resultados_kines)
+    potencial_top   = sum(r["programadas"] for r in resultados_kines)
+    toe_grupal      = round(resumen_grupal["TOE_grupal"] * 100, 2)
+    top_grupal      = round(resumen_grupal["TOP_grupal"] * 100, 2)
+
+    # Cargar TOE del mes anterior para calcular tendencia
+    mes_num_actual = MESES_ES[config["mes"]]
+    anio_actual    = config["año"]
+    if mes_num_actual == 1:
+        mes_num_ant, anio_ant = 12, anio_actual - 1
+    else:
+        mes_num_ant, anio_ant = mes_num_actual - 1, anio_actual
+    ruta_csv_ant = os.path.join(
+        os.path.dirname(__file__), "docs",
+        f"resumen_{str(mes_num_ant).zfill(2)}{anio_ant}.csv"
+    )
+    toe_anterior = {}
+    if os.path.exists(ruta_csv_ant):
+        df_ant = pd.read_csv(ruta_csv_ant, encoding="utf-8-sig")
+        toe_anterior = dict(zip(df_ant["kine"], df_ant["TOE_individual"]))
+
+    datos = {
+        "potencial_total": potencial_total,
+        "potencial_top":   potencial_top,
+        "toe_grupal":      toe_grupal,
+        "top_grupal":      top_grupal,
+        "trayectoria_mes_actual": {
+            "mes": config["mes"],
+            "toe": toe_grupal,
+        },
+        "kines": [
+            {
+                "nombre":      r["kine"],
+                "pacientes":   r["pacientes_unicos"],
+                "evaluaciones": r["evaluaciones"],
+                "realizadas":  r["realizadas"],
+                "efectivas":   r["efectivas"],
+                "suspendidas": r["suspendidas"],
+                "recuperadas": r["recuperadas"],
+                "canceladas":  r["canceladas_real"],
+                "top":         round(r["TOP_individual"] * 100, 2),
+                "toe":         round(r["TOE_individual"] * 100, 2),
+                "tendencia":   (
+                    "↑" if r["TOE_individual"] > toe_anterior.get(r["kine"], r["TOE_individual"]) + 0.02
+                    else "↓" if r["TOE_individual"] < toe_anterior.get(r["kine"], r["TOE_individual"]) - 0.02
+                    else "→"
+                ),
+            }
+            for r in sorted(resultados_kines, key=lambda x: x["TOE_individual"], reverse=True)
+        ],
+    }
+
+    output_dir = os.path.join(os.path.dirname(__file__), "docs")
+    os.makedirs(output_dir, exist_ok=True)
+    ruta = os.path.join(output_dir, "datos_presentacion.json")
+    with open(ruta, "w", encoding="utf-8") as f:
+        json.dump(datos, f, ensure_ascii=False, indent=2)
+    return ruta
+
+
 # ── MAIN ───────────────────────────────────────────────────────────────────────
 
 def main():
@@ -521,9 +584,12 @@ def main():
     ruta_csv  = guardar_csv(resultados_todos, config)
     ruta_html = guardar_html(resultados_staff, grupales, config, len(sospechosas))
 
+    ruta_json = exportar_json_presentacion(resultados_staff, grupales, config)
+
     print(f"\nOutputs generados:")
     print(f"  CSV : {ruta_csv}")
     print(f"  HTML: {ruta_html}")
+    print(f"  JSON: {ruta_json}")
     print()
 
 
