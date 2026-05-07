@@ -534,6 +534,8 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
 
   s.addText(config.presentacion.meta_top_siguiente + "%", { x: 7.3, y: 2.2, w: 4.5, h: 3.0, fontSize: 110, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
   s.addText("TOP", { x: 7.3, y: 5.1, w: 4.5, h: 0.6, fontSize: 18, color: C.gris, align: "center", fontFace: "Calibri" });
+
+  s.addText(config.presentacion.frase_meta_siguiente, { x: 0, y: 6.2, w: 13.3, h: 0.6, fontSize: 20, color: C.blanco, fontFace: "Calibri", align: "center", italic: true });
 }
 
 // ── SLIDE 13: Cierre ──────────────────────────────────────────
