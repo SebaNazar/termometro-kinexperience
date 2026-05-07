@@ -9,14 +9,65 @@ const config = JSON.parse(fs.readFileSync("config_mes.json", "utf8"));
 const datos = JSON.parse(fs.readFileSync("docs/datos_presentacion.json", "utf8"));
 
 // ── Trayectoria histórica ─────────────────────────────────────
+const MESES_CORTOS = {
+  "Enero":"Ene","Febrero":"Feb","Marzo":"Mar","Abril":"Abr",
+  "Mayo":"May","Junio":"Jun","Julio":"Jul","Agosto":"Ago",
+  "Septiembre":"Sep","Octubre":"Oct","Noviembre":"Nov","Diciembre":"Dic"
+};
+function formatearMes(mesLargo, año) {
+  const corto = MESES_CORTOS[mesLargo] || mesLargo.slice(0, 3);
+  return `${corto}-${String(año).slice(-2)}`;
+}
+
+const MESES_NUM = {
+  "Enero":1,"Febrero":2,"Marzo":3,"Abril":4,"Mayo":5,"Junio":6,
+  "Julio":7,"Agosto":8,"Septiembre":9,"Octubre":10,"Noviembre":11,"Diciembre":12
+};
+const MESES_CORTOS_ARR = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+
+function leerTOEDesdeHTML(mes, año) {
+  const mm = String(mes).padStart(2, "0");
+  const filePath = path.join("docs", `termometro_${mm}${año}.html`);
+  if (!fs.existsSync(filePath)) {
+    console.warn(`[trayectoria] Archivo no encontrado: ${filePath}`);
+    return null;
+  }
+  const html = fs.readFileSync(filePath, "utf8");
+  const match = html.match(/TOE Grupal[\s\S]*?<div class="kpi-value"[^>]*>([\d.]+)%<\/div>/);
+  if (!match) {
+    console.warn(`[trayectoria] No se encontró TOE Grupal en ${filePath}`);
+    return null;
+  }
+  return parseFloat(match[1]);
+}
+
 const trayectoriaHistorica = [
   {mes:"Dic-24",toe:67.55},{mes:"Ene-25",toe:64.72},{mes:"Feb-25",toe:50.56},
   {mes:"Mar-25",toe:69.31},{mes:"Abr-25",toe:67.08},{mes:"May-25",toe:76.97},
   {mes:"Jun-25",toe:81.05},{mes:"Jul-25",toe:92.31},{mes:"Ago-25",toe:89.08},
   {mes:"Sep-25",toe:92.15},{mes:"Oct-25",toe:94.26},{mes:"Nov-25",toe:94.61},
-  {mes:"Dic-25",toe:91.11},
+  {mes:"Dic-25",toe:91.11},{mes:"Ene-26",toe:74},
 ];
-const trayectoria = [...trayectoriaHistorica, datos.trayectoria_mes_actual];
+
+// Agrega dinámicamente desde Feb-26 hasta el mes anterior al configurado (Ene-26 es hardcodeado)
+{
+  const mesActualNum = MESES_NUM[config.mes];
+  const añoActual = config.año;
+  let m = 2, a = 2026;
+  while (a < añoActual || (a === añoActual && m < mesActualNum)) {
+    const toe = leerTOEDesdeHTML(m, a);
+    if (toe !== null) {
+      trayectoriaHistorica.push({ mes: `${MESES_CORTOS_ARR[m - 1]}-${String(a).slice(-2)}`, toe });
+    }
+    m++;
+    if (m > 12) { m = 1; a++; }
+  }
+}
+const trayectoria_mes_actual = {
+  ...datos.trayectoria_mes_actual,
+  mes: formatearMes(datos.trayectoria_mes_actual.mes, config.año),
+};
+const trayectoria = [...trayectoriaHistorica, trayectoria_mes_actual];
 
 // ── Colores Kinexperience ──────────────────────────────────────
 const C = {
@@ -102,7 +153,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
 
   // Tarjeta 3 — Frase del mes
   s.addShape(pres.shapes.RECTANGLE, { x: 9.0, y: 1.8, w: 3.8, h: 3.5, fill: { color: C.marino }, line: { color: C.marino }, shadow: makeShadow() });
-  s.addText("META DEL MES", { x: 9.0, y: 1.6, w: 3.8, h: 0.4, fontSize: 11, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
+  s.addText("META DEL MES", { x: 9.0, y: 1.8, w: 3.8, h: 0.4, fontSize: 11, bold: true, color: C.verde, align: "center", fontFace: "Calibri" });
   s.addText(config.presentacion.frase_motivacional, { x: 9.0, y: 2.2, w: 3.8, h: 2.0, fontSize: 22, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri" });
   s.addImage({ path: logoClaro, x: 11.8, y: 0.1, w: 1.3, h: 1.3 });
 }
@@ -201,10 +252,28 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.addText("Evolución TOE individual", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
   s.addText("Mes anterior vs " + config.presentacion.mes_label, { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
-  // Datos enero como "mes anterior" para prueba
-  const anterior = { "Patricio Orrego": 97.6, "José Aguilar": 100.0, "Mauricio Arce": 106.3,
-    "Guillermo Silva": 71.4, "Katalina Correa": 48.6, "Daniela Jaque": 77.1,
-    "Marcia Reveco": 30.0, "Sebastián de la Peña": 68.6 };
+  const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+  const mesIdx = meses.indexOf(config.mes);
+  const mesAnteriorIdx = mesIdx === 0 ? 11 : mesIdx - 1;
+  const añoAnterior = mesIdx === 0 ? config.año - 1 : config.año;
+  const mmAnterior = String(mesAnteriorIdx + 1).padStart(2, "0");
+  const csvAnterior = path.join("docs", `resumen_${mmAnterior}${añoAnterior}.csv`);
+
+  let anterior = {};
+  if (fs.existsSync(csvAnterior)) {
+    const lines = fs.readFileSync(csvAnterior, "utf8").replace(/^﻿/, "").trim().split("\n");
+    const headers = lines[0].split(",");
+    const kineIdx = headers.indexOf("kine");
+    const toeIdx  = headers.indexOf("TOE_individual");
+    for (let i = 1; i < lines.length; i++) {
+      const cols = lines[i].split(",");
+      if (cols[kineIdx] && cols[toeIdx]) {
+        anterior[cols[kineIdx].trim()] = parseFloat(cols[toeIdx]) * 100;
+      }
+    }
+  } else {
+    console.warn(`⚠️  CSV mes anterior no encontrado: ${csvAnterior}`);
+  }
 
   const kinesOrdenados = [...datos.kines].sort((a, b) => b.toe - a.toe);
   s.addChart(pres.charts.BAR, [
@@ -352,7 +421,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.addShape(pres.shapes.RECTANGLE, { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fill: { color: topBg }, line: { color: topBg } });
   s.addText("TOP", { x: 7.6, y: 1.4, w: 4.2, h: 0.5, fontSize: 16, bold: true, color: C.blanco, align: "center", valign: "middle", fontFace: "Calibri", margin: 0 });
   s.addText(datos.top_grupal.toFixed(1) + "%", { x: 7.6, y: 2.1, w: 4.2, h: 2.2, fontSize: 86, bold: true, color: C.marino, align: "center", fontFace: "Calibri" });
-  s.addText(topOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.presentacion.meta_top_mes + "%)", {
+  s.addText(topOk ? "✓ Meta alcanzada" : "✗ Bajo la meta (" + config.meta_TOP * 100 + "%)", {
     x: 7.6, y: 4.4, w: 4.2, h: 0.6, fontSize: 13, bold: true, color: topOk ? C.verdeOk : C.rojo, align: "center", fontFace: "Calibri"
   });
 }
@@ -366,7 +435,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.addText("TOE mensual del equipo", { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
   s.addChart(pres.charts.LINE, [
-    { name: "TOE", labels: trayectoria.map(d => d.mes), values: trayectoria.map(d => d.toe / 100) },
+    { name: "TOE", labels: trayectoria.slice(-13).map(d => d.mes), values: trayectoria.slice(-13).map(d => d.toe / 100) },
   ], {
     x: 0.4, y: 1.5, w: 12.5, h: 5.6,
     lineSize: 3,
@@ -397,17 +466,32 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   s.addText("Zoom — Últimos meses", { x: 0.5, y: 0.2, w: 10, h: 0.6, fontSize: 28, bold: true, color: C.marino, fontFace: "Calibri" });
   s.addText("Comparativa mismo período año anterior", { x: 0.5, y: 0.75, w: 10, h: 0.35, fontSize: 13, color: C.gris, fontFace: "Calibri" });
 
-  const zoomLabels = ["Dic", "Ene", "Feb", "Mar"];
+  const zoom_actual   = trayectoria.slice(-4);
+  const zoom_anterior = zoom_actual.map(d => {
+    const mesCorto = d.mes.split("-")[0];
+    const limit = trayectoriaHistorica.indexOf(d);  // -1 si es mes_actual (no está en historica)
+    const searchIn = limit >= 0 ? trayectoriaHistorica.slice(0, limit) : trayectoriaHistorica;
+    return searchIn.slice().reverse().find(h => h.mes.split("-")[0] === mesCorto) || null;
+  }).filter(Boolean);
+  const zoomLabels    = zoom_actual.map(d => d.mes.split("-")[0]);
+
+  const py1 = zoom_anterior.length ? "20" + zoom_anterior[0].mes.split("-")[1] : "";
+  const py2 = zoom_anterior.length ? "20" + zoom_anterior[zoom_anterior.length - 1].mes.split("-")[1] : "";
+  const cy1 = "20" + zoom_actual[0].mes.split("-")[1];
+  const cy2 = "20" + zoom_actual[zoom_actual.length - 1].mes.split("-")[1];
+  const nombreAnterior = py1 === py2 ? py1 : `${py1}-${py2.slice(2)}`;
+  const nombreActual   = cy1 === cy2 ? cy1 : `${cy1}-${cy2.slice(2)}`;
+
   s.addChart(pres.charts.LINE, [
     {
-      name: "Mismo período 2024-25",
+      name: `Mismo período ${nombreAnterior}`,
       labels: zoomLabels,
-      values: [91.11 / 100, 64.72 / 100, 50.56 / 100, 69.31 / 100],
+      values: zoom_anterior.map(d => d.toe / 100),
     },
     {
-      name: "2025-26",
+      name: nombreActual,
       labels: zoomLabels,
-      values: [91.11 / 100, 73.97 / 100, 58.93 / 100, datos.trayectoria_mes_actual.toe / 100],
+      values: zoom_actual.map(d => d.toe / 100),
     },
   ], {
     x: 0.4, y: 1.5, w: 12.5, h: 5.6,
