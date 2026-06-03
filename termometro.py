@@ -244,7 +244,7 @@ def guardar_csv(resultados: list[dict], config: dict) -> str:
 
     mes_num = str(MESES_ES[config["mes"]]).zfill(2)
     anio    = config["año"]
-    nombre  = f"resumen_{mes_num}{anio}.csv"
+    nombre  = f"resumen_{anio}_{mes_num}.csv"
     ruta    = os.path.join(output_dir, nombre)
 
     df = pd.DataFrame(resultados)
@@ -408,7 +408,7 @@ def guardar_html(resultados_staff: list[dict], grupales: dict,
     output_dir = os.path.join(os.path.dirname(__file__), "docs")
     os.makedirs(output_dir, exist_ok=True)
     mes_num = str(MESES_ES[config["mes"]]).zfill(2)
-    nombre  = f"termometro_{mes_num}{anio}.html"
+    nombre  = f"termometro_{anio}_{mes_num}.html"
     ruta    = os.path.join(output_dir, nombre)
     with open(ruta, "w", encoding="utf-8") as f:
         f.write(html)
@@ -432,7 +432,7 @@ def exportar_json_presentacion(resultados_kines: list[dict], resumen_grupal: dic
         mes_num_ant, anio_ant = mes_num_actual - 1, anio_actual
     ruta_csv_ant = os.path.join(
         os.path.dirname(__file__), "docs",
-        f"resumen_{str(mes_num_ant).zfill(2)}{anio_ant}.csv"
+        f"resumen_{anio_ant}_{str(mes_num_ant).zfill(2)}.csv"
     )
     toe_anterior = {}
     if os.path.exists(ruta_csv_ant):
