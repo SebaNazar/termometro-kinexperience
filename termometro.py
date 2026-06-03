@@ -3,6 +3,7 @@ Termómetro Kinexperience — Motor de cálculo mensual
 Uso: python3 termometro.py
 """
 
+import glob
 import os
 import sys
 import json
@@ -494,6 +495,64 @@ def exportar_json_presentacion(resultados_kines: list[dict], resumen_grupal: dic
     return ruta
 
 
+# ── INDEX CON SELECTOR DE MES ─────────────────────────────────────────────────
+
+def generar_index(docs_dir: str, config: dict) -> str:
+    """
+    Lee el snapshot del mes activo e inyecta una barra de navegación que enlaza
+    todos los termometro_YYYY_MM.html disponibles en docs/. Escribe index.html.
+    """
+    mes_num       = str(MESES_ES[config["mes"]]).zfill(2)
+    anio          = config["año"]
+    nombre_activo = f"termometro_{anio}_{mes_num}.html"
+    ruta_activo   = os.path.join(docs_dir, nombre_activo)
+
+    archivos = sorted(
+        glob.glob(os.path.join(docs_dir, "termometro_????_??.html")),
+        reverse=True,   # más reciente primero
+    )
+
+    enlaces = ""
+    for ruta in archivos:
+        fn     = os.path.basename(ruta)
+        partes = fn.replace("termometro_", "").replace(".html", "").split("_")
+        if len(partes) != 2:
+            continue
+        anio_f, mes_f = int(partes[0]), int(partes[1])
+        label     = f"{MESES_NUM_A_ES.get(mes_f, str(mes_f))} {anio_f}"
+        href      = "index.html" if fn == nombre_activo else fn
+        css_extra = ' class="nav-activo"' if fn == nombre_activo else ""
+        enlaces  += f'    <a href="{href}"{css_extra}>{label}</a>\n'
+
+    nav_css = """
+    .nav-meses { background:#1e293b; padding:0.55rem 1.5rem; margin-bottom:1.5rem;
+                 border-radius:6px; display:flex; align-items:center; gap:0.4rem; flex-wrap:wrap; }
+    .nav-meses .nav-etiqueta { color:#64748b; font-size:0.72rem; text-transform:uppercase;
+                               letter-spacing:.06em; margin-right:0.4rem; white-space:nowrap; }
+    .nav-meses a { color:#94a3b8; font-size:0.82rem; text-decoration:none;
+                   padding:0.22rem 0.6rem; border-radius:4px; transition:background .15s; white-space:nowrap; }
+    .nav-meses a:hover { background:#334155; color:#e2e8f0; }
+    .nav-meses a.nav-activo { background:#3b82f6; color:#fff; font-weight:600; }"""
+
+    nav_html = (
+        f'\n  <nav class="nav-meses">\n'
+        f'    <span class="nav-etiqueta">Historial</span>\n'
+        f'{enlaces}'
+        f'  </nav>'
+    )
+
+    with open(ruta_activo, encoding="utf-8") as f:
+        html = f.read()
+
+    html = html.replace("</style>", nav_css + "\n  </style>", 1)
+    html = html.replace("<body>", "<body>" + nav_html, 1)
+
+    ruta_index = os.path.join(docs_dir, "index.html")
+    with open(ruta_index, "w", encoding="utf-8") as f:
+        f.write(html)
+    return ruta_index
+
+
 # ── MAIN ───────────────────────────────────────────────────────────────────────
 
 def main():
@@ -601,15 +660,17 @@ def main():
     print(f"{'─'*60}")
 
     # Guardar outputs
-    ruta_csv  = guardar_csv(resultados_todos, config)
-    ruta_html = guardar_html(resultados_staff, grupales, config, len(sospechosas))
-
-    ruta_json = exportar_json_presentacion(resultados_staff, grupales, config)
+    ruta_csv   = guardar_csv(resultados_todos, config)
+    ruta_html  = guardar_html(resultados_staff, grupales, config, len(sospechosas))
+    ruta_json  = exportar_json_presentacion(resultados_staff, grupales, config)
+    docs_dir   = os.path.join(os.path.dirname(__file__), "docs")
+    ruta_index = generar_index(docs_dir, config)
 
     print(f"\nOutputs generados:")
-    print(f"  CSV : {ruta_csv}")
-    print(f"  HTML: {ruta_html}")
-    print(f"  JSON: {ruta_json}")
+    print(f"  CSV  : {ruta_csv}")
+    print(f"  HTML : {ruta_html}")
+    print(f"  JSON : {ruta_json}")
+    print(f"  INDEX: {ruta_index}")
     print()
 
 
