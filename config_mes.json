@@ -1,7 +1,7 @@
 {
-  "mes": "Marzo",
+  "mes": "Mayo",
   "año": 2026,
-  "dias_habiles": 22,
+  "dias_habiles": 19,
   "kines_staff": [
     "Sebastián de la Peña",
     "Patricio Orrego",
@@ -9,38 +9,38 @@
     "José Aguilar",
     "Guillermo Silva",
     "Daniela Jaque",
-    "Andrés Mardones",
     "Marcia Reveco",
-    "Francisca Campos"
+    "Francisca Campos",
+    "Fernanda Pino"
   ],
   "kines_refuerzo": [
-    "Fernanda Pino",
-    "Francisco Vásquez",
-    "Marcelo Lagos"
+    "Marcelo Lagos",
+    "Andrés Mardones"
   ],
   "excepciones_capacidad": {
     "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 },
-    "Andrés Mardones": { "tipo": "fecha_hasta", "fecha": "2026-03-20" }
+    "": { "tipo": "fecha_hasta", "fecha": "2026-03-20" }
   },
-  "meta_TOE": 0.74,
-  "meta_TOP": 0.76,
+  "meta_TOE": 0.77,
+  "meta_TOP": 0.79,
   "notas_mes": "",
   "presentacion": {
-    "mes_label": "Marzo 2026",
-    "frase_motivacional": "Preparar el terreno de retorno",
+    "mes_label": "Mayo 2026",
+    "frase_motivacional": "Seguir equilibrando la carga del equipo",
     "meta_toe_siguiente": 77,
     "meta_top_siguiente": 79,
-    "meta_siguiente_nombre": "Abril 2026"
+    "meta_siguiente_nombre": "Julio 2026",
+    "frase_meta_siguiente": "fidelizar a nuestros pacientes"
   },
   "pagos": {
     "rut_empresa": "77.036.223-7",
     "sueldo_base_kine_nuevo": 640000,
-    "bono_bencina_por_sesion": 0,
+    "bono_bencina_por_sesion": 1000,
     "valor_sesion_refuerzo_bruto": 21053,
     "porcentaje_boleta_honorarios": 0.1525,
     "trimestre_actual": "T2-2026",
     "mes_cierre_trimestre": "Mayo",
-    "toe_grupal_meses_trimestre": [0.0, 0.0, 0.0],
+    "toe_grupal_meses_trimestre": [0.736, 0.746, 0.0],
     "perfiles_especiales": {
       "Patricio Orrego": {
         "perfil": "kine_antiguo",

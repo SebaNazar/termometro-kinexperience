@@ -147,10 +147,14 @@ def calcular_bonos_staff(
 
         if perfil == "kine_nuevo":
             bono = round(_buscar_bono(TABLA_BONO_KINE_NUEVO, toe) * factor)
-            bono_bencina = realizadas * bono_bencina_por_sesion
-
         elif perfil == "kine_antiguo":
             bono = round(_buscar_bono(TABLA_BONO_KINE_ANTIGUO, toe) * factor)
+
+        if perfil in ("kine_nuevo", "kine_antiguo"):
+            sesiones_bencina = (
+                r["realizadas"] + r["recuperadas"] + r["evaluaciones"] + r.get("grupales", 0)
+            )
+            bono_bencina = max(0, sesiones_bencina - 40) * bono_bencina_por_sesion
 
         # mauricio y sebastian se manejan trimestralmente (ver generar_borrador)
 
