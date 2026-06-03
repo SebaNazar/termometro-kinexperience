@@ -5,7 +5,7 @@ SKILL.md
 __pycache__/
 *.pyc
 docs/resumen_*.csv
-docs/termometro_*.html
+docs/termometro_[0-9][0-9][0-9][0-9][0-9][0-9].html
 docs/borrador_contabilidad_*.txt
 docs/refuerzo_*.txt
 CLAUDE.md
