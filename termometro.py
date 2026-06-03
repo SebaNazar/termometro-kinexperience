@@ -90,6 +90,22 @@ MESES_ES = {
     "Septiembre": 9, "Octubre": 10, "Noviembre": 11, "Diciembre": 12,
 }
 
+MESES_NUM_A_ES = {v: k for k, v in MESES_ES.items()}
+
+
+def detectar_mes_activo(df: pd.DataFrame) -> tuple[int, int]:
+    """
+    Devuelve (mes_num, año) del mes más reciente con ≥ 5 sesiones en COL_FECHA.
+    El umbral de 5 evita que una entrada aislada con fecha errónea cambie el mes activo.
+    """
+    fechas = pd.to_datetime(df[COL_FECHA], dayfirst=True, errors="coerce").dropna()
+    por_mes = fechas.groupby([fechas.dt.year, fechas.dt.month]).size()
+    por_mes = por_mes[por_mes >= 5]
+    if por_mes.empty:
+        sys.exit("ERROR: No se pudo detectar el mes activo (ningún mes tiene ≥5 sesiones).")
+    anio, mes_num = max(por_mes.index)
+    return int(mes_num), int(anio)
+
 
 def filtrar_mes(df: pd.DataFrame, config: dict) -> pd.DataFrame:
     mes_num = MESES_ES[config["mes"]]
@@ -486,12 +502,16 @@ def main():
     print("=" * 60)
 
     config = cargar_config()
-    print(f"\nMes configurado: {config['mes']} {config['año']}")
-    print(f"Días hábiles:    {config['dias_habiles']}")
-    print(f"Staff oficial:   {len(config['kines_staff'])} kines")
-
     gc = conectar()
     df_raw = cargar_registro(gc)
+
+    mes_num_det, anio_det = detectar_mes_activo(df_raw)
+    config["mes"] = MESES_NUM_A_ES[mes_num_det]
+    config["año"] = anio_det
+
+    print(f"\nMes detectado:   {config['mes']} {config['año']}")
+    print(f"Días hábiles:    {config['dias_habiles']}")
+    print(f"Staff oficial:   {len(config['kines_staff'])} kines")
 
     df_mes = filtrar_mes(df_raw, config)
 
