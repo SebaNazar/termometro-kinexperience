@@ -1,11 +1,11 @@
 {
   "potencial_total": 655.5,
-  "potencial_top": 51.5,
-  "toe_grupal": 8.47,
-  "top_grupal": 7.86,
+  "potencial_top": 55.5,
+  "toe_grupal": 9.08,
+  "top_grupal": 8.47,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 8.47
+    "toe": 9.08
   },
   "kines": [
     {
@@ -61,6 +61,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Fernanda Pino",
+      "pacientes": 8,
+      "evaluaciones": 0,
+      "realizadas": 7,
+      "efectivas": 9.0,
+      "suspendidas": 0,
+      "recuperadas": 2,
+      "canceladas": -2,
+      "top": 7.37,
+      "toe": 9.47,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Patricio Orrego",
       "pacientes": 6,
       "evaluaciones": 0,
@@ -71,19 +84,6 @@
       "canceladas": 0,
       "top": 9.36,
       "toe": 9.36,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Fernanda Pino",
-      "pacientes": 5,
-      "evaluaciones": 0,
-      "realizadas": 3,
-      "efectivas": 5.0,
-      "suspendidas": 0,
-      "recuperadas": 2,
-      "canceladas": -2,
-      "top": 3.16,
-      "toe": 5.26,
       "tendencia": "→"
     },
     {
