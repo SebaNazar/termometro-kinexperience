@@ -1,29 +1,42 @@
 {
   "potencial_total": 655.5,
-  "potencial_top": 57.5,
-  "toe_grupal": 9.38,
-  "top_grupal": 8.77,
+  "potencial_top": 65.5,
+  "toe_grupal": 10.6,
+  "top_grupal": 9.99,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 9.38
+    "toe": 10.6
   },
   "kines": [
     {
-      "nombre": "Katalina Correa",
-      "pacientes": 10,
-      "evaluaciones": 0,
-      "realizadas": 12,
-      "efectivas": 12.0,
+      "nombre": "José Aguilar",
+      "pacientes": 12,
+      "evaluaciones": 1,
+      "realizadas": 16,
+      "efectivas": 17.0,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 12.63,
+      "top": 17.89,
+      "toe": 17.89,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 7,
+      "evaluaciones": 0,
+      "realizadas": 11,
+      "efectivas": 12.0,
+      "suspendidas": 0,
+      "recuperadas": 1,
+      "canceladas": -1,
+      "top": 11.58,
       "toe": 12.63,
       "tendencia": "→"
     },
     {
-      "nombre": "José Aguilar",
-      "pacientes": 11,
+      "nombre": "Katalina Correa",
+      "pacientes": 10,
       "evaluaciones": 0,
       "realizadas": 12,
       "efectivas": 12.0,
@@ -45,19 +58,6 @@
       "canceladas": 0,
       "top": 11.05,
       "toe": 11.05,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 6,
-      "evaluaciones": 0,
-      "realizadas": 8,
-      "efectivas": 9.0,
-      "suspendidas": 0,
-      "recuperadas": 1,
-      "canceladas": -1,
-      "top": 8.42,
-      "toe": 9.47,
       "tendencia": "→"
     },
     {
