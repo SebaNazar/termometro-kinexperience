@@ -1,13 +1,26 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 174.5,
-  "toe_grupal": 20.4,
-  "top_grupal": 20.64,
+  "potencial_top": 183.5,
+  "toe_grupal": 21.47,
+  "top_grupal": 21.7,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 20.4
+    "toe": 21.47
   },
   "kines": [
+    {
+      "nombre": "José Aguilar",
+      "pacientes": 13,
+      "evaluaciones": 1,
+      "realizadas": 30,
+      "efectivas": 31.0,
+      "suspendidas": 1,
+      "recuperadas": 0,
+      "canceladas": 1,
+      "top": 33.68,
+      "toe": 32.63,
+      "tendencia": "→"
+    },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 13,
@@ -22,29 +35,29 @@
       "tendencia": "→"
     },
     {
-      "nombre": "José Aguilar",
-      "pacientes": 13,
-      "evaluaciones": 1,
-      "realizadas": 25,
-      "efectivas": 26.0,
-      "suspendidas": 1,
-      "recuperadas": 0,
-      "canceladas": 1,
-      "top": 28.42,
-      "toe": 27.37,
-      "tendencia": "→"
-    },
-    {
       "nombre": "Katalina Correa",
       "pacientes": 11,
       "evaluaciones": 0,
-      "realizadas": 20,
-      "efectivas": 20.0,
+      "realizadas": 22,
+      "efectivas": 22.0,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 21.05,
-      "toe": 21.05,
+      "top": 23.16,
+      "toe": 23.16,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 7,
+      "evaluaciones": 0,
+      "realizadas": 17,
+      "efectivas": 19.0,
+      "suspendidas": 2,
+      "recuperadas": 2,
+      "canceladas": 0,
+      "top": 20.0,
+      "toe": 20.0,
       "tendencia": "→"
     },
     {
@@ -71,19 +84,6 @@
       "canceladas": -4,
       "top": 15.26,
       "toe": 19.47,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 7,
-      "evaluaciones": 0,
-      "realizadas": 15,
-      "efectivas": 17.0,
-      "suspendidas": 2,
-      "recuperadas": 2,
-      "canceladas": 0,
-      "top": 17.89,
-      "toe": 17.89,
       "tendencia": "→"
     },
     {
