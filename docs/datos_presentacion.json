@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 168.0,
-  "toe_grupal": 19.52,
-  "top_grupal": 19.87,
+  "potencial_top": 174.5,
+  "toe_grupal": 20.4,
+  "top_grupal": 20.64,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 19.52
+    "toe": 20.4
   },
   "kines": [
     {
@@ -35,6 +35,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Katalina Correa",
+      "pacientes": 11,
+      "evaluaciones": 0,
+      "realizadas": 20,
+      "efectivas": 20.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 21.05,
+      "toe": 21.05,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Sebastián de la Peña",
       "pacientes": 8,
       "evaluaciones": 1,
@@ -48,16 +61,16 @@
       "tendencia": "→"
     },
     {
-      "nombre": "Katalina Correa",
-      "pacientes": 11,
+      "nombre": "Fernanda Pino",
+      "pacientes": 9,
       "evaluaciones": 0,
-      "realizadas": 18,
-      "efectivas": 18.0,
+      "realizadas": 13,
+      "efectivas": 18.5,
       "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 18.95,
-      "toe": 18.95,
+      "recuperadas": 4,
+      "canceladas": -4,
+      "top": 15.26,
+      "toe": 19.47,
       "tendencia": "→"
     },
     {
@@ -109,19 +122,6 @@
       "recuperadas": 1,
       "canceladas": 5,
       "top": 18.95,
-      "toe": 13.68,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Fernanda Pino",
-      "pacientes": 9,
-      "evaluaciones": 0,
-      "realizadas": 10,
-      "efectivas": 13.0,
-      "suspendidas": 0,
-      "recuperadas": 3,
-      "canceladas": -3,
-      "top": 10.53,
       "toe": 13.68,
       "tendencia": "→"
     }
