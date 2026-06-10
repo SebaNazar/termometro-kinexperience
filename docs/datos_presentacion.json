@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
   "potencial_top": 199.5,
-  "toe_grupal": 23.24,
+  "toe_grupal": 23.36,
   "top_grupal": 23.6,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 23.24
+    "toe": 23.36
   },
   "kines": [
     {
@@ -13,12 +13,12 @@
       "pacientes": 13,
       "evaluaciones": 1,
       "realizadas": 11,
-      "efectivas": 31.5,
+      "efectivas": 32.5,
       "suspendidas": 1,
-      "recuperadas": 0,
-      "canceladas": 1,
+      "recuperadas": 1,
+      "canceladas": 0,
       "top": 38.01,
-      "toe": 36.84,
+      "toe": 38.01,
       "tendencia": "→"
     },
     {
