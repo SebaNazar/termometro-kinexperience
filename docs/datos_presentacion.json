@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 227.0,
-  "toe_grupal": 26.61,
-  "top_grupal": 26.85,
+  "potencial_top": 233.0,
+  "toe_grupal": 27.32,
+  "top_grupal": 27.56,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 26.61
+    "toe": 27.32
   },
   "kines": [
     {
@@ -48,6 +48,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Sebastián de la Peña",
+      "pacientes": 9,
+      "evaluaciones": 2,
+      "realizadas": 18,
+      "efectivas": 27.0,
+      "suspendidas": 0,
+      "recuperadas": 1,
+      "canceladas": -1,
+      "top": 27.37,
+      "toe": 28.42,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Marcia Reveco",
       "pacientes": 7,
       "evaluaciones": 0,
@@ -71,19 +84,6 @@
       "canceladas": -5,
       "top": 20.53,
       "toe": 25.79,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Sebastián de la Peña",
-      "pacientes": 8,
-      "evaluaciones": 1,
-      "realizadas": 13,
-      "efectivas": 21.0,
-      "suspendidas": 0,
-      "recuperadas": 1,
-      "canceladas": -1,
-      "top": 21.05,
-      "toe": 22.11,
       "tendencia": "→"
     },
     {
