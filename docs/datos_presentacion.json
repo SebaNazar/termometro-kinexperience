@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 282.0,
-  "toe_grupal": 33.23,
-  "top_grupal": 33.35,
+  "potencial_top": 290.0,
+  "toe_grupal": 33.94,
+  "top_grupal": 34.3,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 33.23
+    "toe": 33.94
   },
   "kines": [
     {
@@ -38,13 +38,13 @@
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 36,
-      "efectivas": 36.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 37.89,
-      "toe": 37.89,
+      "realizadas": 40,
+      "efectivas": 41.0,
+      "suspendidas": 3,
+      "recuperadas": 1,
+      "canceladas": 2,
+      "top": 45.26,
+      "toe": 43.16,
       "tendencia": "→"
     },
     {
@@ -74,6 +74,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Marcia Reveco",
+      "pacientes": 8,
+      "evaluaciones": 1,
+      "realizadas": 26,
+      "efectivas": 29.0,
+      "suspendidas": 3,
+      "recuperadas": 2,
+      "canceladas": 1,
+      "top": 31.58,
+      "toe": 30.53,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Fernanda Pino",
       "pacientes": 10,
       "evaluaciones": 1,
@@ -84,19 +97,6 @@
       "canceladas": -5,
       "top": 24.74,
       "toe": 30.0,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 7,
-      "evaluaciones": 0,
-      "realizadas": 26,
-      "efectivas": 28.0,
-      "suspendidas": 3,
-      "recuperadas": 2,
-      "canceladas": 1,
-      "top": 30.53,
-      "toe": 29.47,
       "tendencia": "→"
     },
     {
