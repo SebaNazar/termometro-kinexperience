@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 264.0,
-  "toe_grupal": 31.11,
-  "top_grupal": 31.22,
+  "potencial_top": 268.5,
+  "toe_grupal": 31.52,
+  "top_grupal": 31.76,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 31.11
+    "toe": 31.52
   },
   "kines": [
     {
@@ -48,6 +48,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Sebastián de la Peña",
+      "pacientes": 9,
+      "evaluaciones": 2,
+      "realizadas": 20,
+      "efectivas": 30.5,
+      "suspendidas": 1,
+      "recuperadas": 1,
+      "canceladas": 0,
+      "top": 32.11,
+      "toe": 32.11,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Daniela Jaque",
       "pacientes": 10,
       "evaluaciones": 0,
@@ -71,19 +84,6 @@
       "canceladas": -5,
       "top": 24.74,
       "toe": 30.0,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Sebastián de la Peña",
-      "pacientes": 9,
-      "evaluaciones": 2,
-      "realizadas": 18,
-      "efectivas": 27.0,
-      "suspendidas": 0,
-      "recuperadas": 1,
-      "canceladas": -1,
-      "top": 27.37,
-      "toe": 28.42,
       "tendencia": "→"
     },
     {
