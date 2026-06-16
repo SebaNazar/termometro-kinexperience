@@ -1,13 +1,26 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 291.0,
-  "toe_grupal": 34.06,
-  "top_grupal": 34.42,
+  "potencial_top": 300.0,
+  "toe_grupal": 35.13,
+  "top_grupal": 35.48,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 34.06
+    "toe": 35.13
   },
   "kines": [
+    {
+      "nombre": "José Aguilar",
+      "pacientes": 14,
+      "evaluaciones": 1,
+      "realizadas": 52,
+      "efectivas": 54.0,
+      "suspendidas": 2,
+      "recuperadas": 1,
+      "canceladas": 1,
+      "top": 57.89,
+      "toe": 56.84,
+      "tendencia": "→"
+    },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 13,
@@ -22,29 +35,29 @@
       "tendencia": "→"
     },
     {
-      "nombre": "José Aguilar",
-      "pacientes": 14,
-      "evaluaciones": 1,
-      "realizadas": 47,
-      "efectivas": 49.0,
-      "suspendidas": 2,
-      "recuperadas": 1,
-      "canceladas": 1,
-      "top": 52.63,
-      "toe": 51.58,
-      "tendencia": "→"
-    },
-    {
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 41,
-      "efectivas": 42.0,
+      "realizadas": 43,
+      "efectivas": 44.0,
       "suspendidas": 3,
       "recuperadas": 1,
       "canceladas": 2,
-      "top": 46.32,
-      "toe": 44.21,
+      "top": 48.42,
+      "toe": 46.32,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 8,
+      "evaluaciones": 1,
+      "realizadas": 28,
+      "efectivas": 31.0,
+      "suspendidas": 3,
+      "recuperadas": 2,
+      "canceladas": 1,
+      "top": 33.68,
+      "toe": 32.63,
       "tendencia": "→"
     },
     {
@@ -70,19 +83,6 @@
       "recuperadas": 4,
       "canceladas": 4,
       "top": 34.74,
-      "toe": 30.53,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 8,
-      "evaluaciones": 1,
-      "realizadas": 26,
-      "efectivas": 29.0,
-      "suspendidas": 3,
-      "recuperadas": 2,
-      "canceladas": 1,
-      "top": 31.58,
       "toe": 30.53,
       "tendencia": "→"
     },
