@@ -1,24 +1,24 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 309.5,
-  "toe_grupal": 36.13,
-  "top_grupal": 36.61,
+  "potencial_top": 340.5,
+  "toe_grupal": 39.8,
+  "top_grupal": 40.27,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 36.13
+    "toe": 39.8
   },
   "kines": [
     {
       "nombre": "José Aguilar",
-      "pacientes": 14,
+      "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 52,
-      "efectivas": 54.0,
+      "realizadas": 57,
+      "efectivas": 59.0,
       "suspendidas": 2,
       "recuperadas": 1,
       "canceladas": 1,
-      "top": 57.89,
-      "toe": 56.84,
+      "top": 63.16,
+      "toe": 62.11,
       "tendencia": "→"
     },
     {
@@ -38,13 +38,39 @@
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 46,
-      "efectivas": 47.0,
+      "realizadas": 47,
+      "efectivas": 48.0,
       "suspendidas": 3,
       "recuperadas": 1,
       "canceladas": 2,
-      "top": 51.58,
-      "toe": 49.47,
+      "top": 52.63,
+      "toe": 50.53,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Guillermo Silva",
+      "pacientes": 11,
+      "evaluaciones": 0,
+      "realizadas": 33,
+      "efectivas": 37.5,
+      "suspendidas": 1,
+      "recuperadas": 0,
+      "canceladas": 1,
+      "top": 40.53,
+      "toe": 39.47,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 8,
+      "evaluaciones": 1,
+      "realizadas": 31,
+      "efectivas": 34.0,
+      "suspendidas": 4,
+      "recuperadas": 2,
+      "canceladas": 2,
+      "top": 37.89,
+      "toe": 35.79,
       "tendencia": "→"
     },
     {
@@ -58,19 +84,6 @@
       "canceladas": -5,
       "top": 30.53,
       "toe": 35.79,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 8,
-      "evaluaciones": 1,
-      "realizadas": 28,
-      "efectivas": 31.0,
-      "suspendidas": 4,
-      "recuperadas": 2,
-      "canceladas": 2,
-      "top": 34.74,
-      "toe": 32.63,
       "tendencia": "→"
     },
     {
@@ -110,19 +123,6 @@
       "canceladas": 0,
       "top": 17.89,
       "toe": 17.89,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Guillermo Silva",
-      "pacientes": 10,
-      "evaluaciones": 0,
-      "realizadas": 14,
-      "efectivas": 15.5,
-      "suspendidas": 1,
-      "recuperadas": 0,
-      "canceladas": 1,
-      "top": 17.37,
-      "toe": 16.32,
       "tendencia": "→"
     }
   ]
