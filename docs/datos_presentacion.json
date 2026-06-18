@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 346.5,
-  "toe_grupal": 40.39,
-  "top_grupal": 40.98,
+  "potencial_top": 349.5,
+  "toe_grupal": 40.75,
+  "top_grupal": 41.34,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 40.39
+    "toe": 40.75
   },
   "kines": [
     {
@@ -61,6 +61,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Fernanda Pino",
+      "pacientes": 10,
+      "evaluaciones": 1,
+      "realizadas": 28,
+      "efectivas": 37.0,
+      "suspendidas": 0,
+      "recuperadas": 5,
+      "canceladas": -5,
+      "top": 33.68,
+      "toe": 38.95,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Marcia Reveco",
       "pacientes": 8,
       "evaluaciones": 1,
@@ -70,19 +83,6 @@
       "recuperadas": 2,
       "canceladas": 2,
       "top": 37.89,
-      "toe": 35.79,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Fernanda Pino",
-      "pacientes": 10,
-      "evaluaciones": 1,
-      "realizadas": 25,
-      "efectivas": 34.0,
-      "suspendidas": 0,
-      "recuperadas": 5,
-      "canceladas": -5,
-      "top": 30.53,
       "toe": 35.79,
       "tendencia": "→"
     },
