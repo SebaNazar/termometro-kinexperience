@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 364.0,
-  "toe_grupal": 42.34,
-  "top_grupal": 43.05,
+  "potencial_top": 366.0,
+  "toe_grupal": 42.58,
+  "top_grupal": 43.29,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 42.34
+    "toe": 42.58
   },
   "kines": [
     {
@@ -48,6 +48,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Fernanda Pino",
+      "pacientes": 10,
+      "evaluaciones": 1,
+      "realizadas": 30,
+      "efectivas": 39.0,
+      "suspendidas": 0,
+      "recuperadas": 5,
+      "canceladas": -5,
+      "top": 35.79,
+      "toe": 41.05,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Guillermo Silva",
       "pacientes": 11,
       "evaluaciones": 0,
@@ -58,19 +71,6 @@
       "canceladas": 1,
       "top": 40.53,
       "toe": 39.47,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Fernanda Pino",
-      "pacientes": 10,
-      "evaluaciones": 1,
-      "realizadas": 28,
-      "efectivas": 37.0,
-      "suspendidas": 0,
-      "recuperadas": 5,
-      "canceladas": -5,
-      "top": 33.68,
-      "toe": 38.95,
       "tendencia": "→"
     },
     {
