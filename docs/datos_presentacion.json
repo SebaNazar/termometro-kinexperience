@@ -1,8 +1,8 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 477.5,
+  "potencial_top": 478.5,
   "toe_grupal": 54.82,
-  "top_grupal": 56.48,
+  "top_grupal": 56.59,
   "trayectoria_mes_actual": {
     "mes": "Junio",
     "toe": 54.82
@@ -12,13 +12,13 @@
       "nombre": "José Aguilar",
       "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 81,
-      "efectivas": 84.0,
-      "suspendidas": 4,
+      "realizadas": 80,
+      "efectivas": 83.0,
+      "suspendidas": 5,
       "recuperadas": 2,
-      "canceladas": 2,
+      "canceladas": 3,
       "top": 90.53,
-      "toe": 88.42,
+      "toe": 87.37,
       "tendencia": "→"
     },
     {
@@ -38,13 +38,13 @@
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 66,
-      "efectivas": 67.0,
+      "realizadas": 67,
+      "efectivas": 68.0,
       "suspendidas": 3,
       "recuperadas": 1,
       "canceladas": 2,
-      "top": 72.63,
-      "toe": 70.53,
+      "top": 73.68,
+      "toe": 71.58,
       "tendencia": "→"
     },
     {
