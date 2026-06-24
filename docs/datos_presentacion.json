@@ -1,37 +1,37 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 467.0,
-  "toe_grupal": 53.7,
-  "top_grupal": 55.23,
+  "potencial_top": 476.5,
+  "toe_grupal": 54.7,
+  "top_grupal": 56.36,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 53.7
+    "toe": 54.7
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 76,
-      "efectivas": 79.0,
+      "realizadas": 81,
+      "efectivas": 84.0,
       "suspendidas": 4,
       "recuperadas": 2,
       "canceladas": 2,
-      "top": 85.26,
-      "toe": 83.16,
+      "top": 90.53,
+      "toe": 88.42,
       "tendencia": "→"
     },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 16,
       "evaluaciones": 3,
-      "realizadas": 27,
-      "efectivas": 69.5,
-      "suspendidas": 3,
+      "realizadas": 29,
+      "efectivas": 73.0,
+      "suspendidas": 4,
       "recuperadas": 2,
-      "canceladas": 1,
-      "top": 82.46,
-      "toe": 81.29,
+      "canceladas": 2,
+      "top": 87.72,
+      "toe": 85.38,
       "tendencia": "→"
     },
     {
