@@ -1,50 +1,50 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 480.5,
-  "toe_grupal": 55.06,
-  "top_grupal": 56.83,
+  "potencial_top": 521.5,
+  "toe_grupal": 59.91,
+  "top_grupal": 61.68,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 55.06
+    "toe": 59.91
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 80,
-      "efectivas": 83.0,
+      "realizadas": 85,
+      "efectivas": 88.0,
       "suspendidas": 5,
       "recuperadas": 2,
       "canceladas": 3,
-      "top": 90.53,
-      "toe": 87.37,
+      "top": 95.79,
+      "toe": 92.63,
       "tendencia": "→"
     },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 16,
       "evaluaciones": 3,
-      "realizadas": 29,
-      "efectivas": 73.0,
+      "realizadas": 30,
+      "efectivas": 74.0,
       "suspendidas": 4,
       "recuperadas": 2,
       "canceladas": 2,
-      "top": 87.72,
-      "toe": 85.38,
+      "top": 88.89,
+      "toe": 86.55,
       "tendencia": "→"
     },
     {
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 1,
-      "realizadas": 68,
-      "efectivas": 70.0,
+      "realizadas": 70,
+      "efectivas": 72.0,
       "suspendidas": 3,
       "recuperadas": 1,
       "canceladas": 2,
-      "top": 75.79,
-      "toe": 73.68,
+      "top": 77.89,
+      "toe": 75.79,
       "tendencia": "→"
     },
     {
@@ -58,6 +58,19 @@
       "canceladas": 4,
       "top": 63.16,
       "toe": 58.95,
+      "tendencia": "→"
+    },
+    {
+      "nombre": "Francisca Campos",
+      "pacientes": 10,
+      "evaluaciones": 1,
+      "realizadas": 49,
+      "efectivas": 50.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 52.63,
+      "toe": 52.63,
       "tendencia": "→"
     },
     {
@@ -110,19 +123,6 @@
       "canceladas": 2,
       "top": 37.89,
       "toe": 35.79,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Francisca Campos",
-      "pacientes": 8,
-      "evaluaciones": 1,
-      "realizadas": 16,
-      "efectivas": 17.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 17.89,
-      "toe": 17.89,
       "tendencia": "→"
     }
   ]
