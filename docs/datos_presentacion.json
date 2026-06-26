@@ -1,24 +1,24 @@
 {
   "potencial_total": 845.5,
   "potencial_top": 558.0,
-  "toe_grupal": 64.22,
+  "toe_grupal": 64.1,
   "top_grupal": 66.0,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 64.22
+    "toe": 64.1
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 90,
-      "efectivas": 94.0,
-      "suspendidas": 5,
+      "realizadas": 89,
+      "efectivas": 93.0,
+      "suspendidas": 6,
       "recuperadas": 3,
-      "canceladas": 2,
+      "canceladas": 3,
       "top": 101.05,
-      "toe": 98.95,
+      "toe": 97.89,
       "tendencia": "→"
     },
     {
