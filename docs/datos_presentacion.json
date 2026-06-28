@@ -1,8 +1,8 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 576.0,
+  "potencial_top": 577.0,
   "toe_grupal": 66.23,
-  "top_grupal": 68.13,
+  "top_grupal": 68.24,
   "trayectoria_mes_actual": {
     "mes": "Junio",
     "toe": 66.23
@@ -66,10 +66,10 @@
       "evaluaciones": 2,
       "realizadas": 37,
       "efectivas": 58.5,
-      "suspendidas": 9,
+      "suspendidas": 10,
       "recuperadas": 3,
-      "canceladas": 6,
-      "top": 67.89,
+      "canceladas": 7,
+      "top": 68.95,
       "toe": 61.58,
       "tendencia": "→"
     },
