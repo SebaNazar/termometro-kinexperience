@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 577.0,
-  "toe_grupal": 66.23,
-  "top_grupal": 68.24,
+  "potencial_top": 597.0,
+  "toe_grupal": 68.36,
+  "top_grupal": 70.61,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 66.23
+    "toe": 68.36
   },
   "kines": [
     {
@@ -61,6 +61,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Francisca Campos",
+      "pacientes": 11,
+      "evaluaciones": 2,
+      "realizadas": 66,
+      "efectivas": 68.0,
+      "suspendidas": 2,
+      "recuperadas": 0,
+      "canceladas": 2,
+      "top": 73.68,
+      "toe": 71.58,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Sebastián de la Peña",
       "pacientes": 9,
       "evaluaciones": 2,
@@ -84,19 +97,6 @@
       "canceladas": -6,
       "top": 52.11,
       "toe": 58.42,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Francisca Campos",
-      "pacientes": 10,
-      "evaluaciones": 1,
-      "realizadas": 49,
-      "efectivas": 50.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 52.63,
-      "toe": 52.63,
       "tendencia": "→"
     },
     {
