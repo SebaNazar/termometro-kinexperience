@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 617.0,
-  "toe_grupal": 70.49,
-  "top_grupal": 72.97,
+  "potencial_top": 620.0,
+  "toe_grupal": 70.85,
+  "top_grupal": 73.33,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 70.49
+    "toe": 70.85
   },
   "kines": [
     {
@@ -35,6 +35,19 @@
       "tendencia": "→"
     },
     {
+      "nombre": "Daniela Jaque",
+      "pacientes": 16,
+      "evaluaciones": 0,
+      "realizadas": 71,
+      "efectivas": 81.0,
+      "suspendidas": 14,
+      "recuperadas": 10,
+      "canceladas": 4,
+      "top": 89.47,
+      "toe": 85.26,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 1,
@@ -45,19 +58,6 @@
       "canceladas": 6,
       "top": 91.58,
       "toe": 85.26,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Daniela Jaque",
-      "pacientes": 16,
-      "evaluaciones": 0,
-      "realizadas": 69,
-      "efectivas": 79.0,
-      "suspendidas": 14,
-      "recuperadas": 10,
-      "canceladas": 4,
-      "top": 87.37,
-      "toe": 83.16,
       "tendencia": "→"
     },
     {
@@ -77,13 +77,13 @@
       "nombre": "Sebastián de la Peña",
       "pacientes": 9,
       "evaluaciones": 2,
-      "realizadas": 37,
-      "efectivas": 58.5,
+      "realizadas": 38,
+      "efectivas": 59.5,
       "suspendidas": 10,
       "recuperadas": 3,
       "canceladas": 7,
-      "top": 68.95,
-      "toe": 61.58,
+      "top": 70.0,
+      "toe": 62.63,
       "tendencia": "→"
     },
     {
