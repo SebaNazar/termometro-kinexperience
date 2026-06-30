@@ -1,50 +1,50 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 599.0,
-  "toe_grupal": 68.6,
-  "top_grupal": 70.85,
+  "potencial_top": 607.0,
+  "toe_grupal": 69.66,
+  "top_grupal": 71.79,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 68.6
+    "toe": 69.66
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 15,
       "evaluaciones": 1,
-      "realizadas": 89,
-      "efectivas": 93.0,
+      "realizadas": 94,
+      "efectivas": 98.0,
       "suspendidas": 6,
       "recuperadas": 3,
       "canceladas": 3,
-      "top": 101.05,
-      "toe": 97.89,
+      "top": 106.32,
+      "toe": 103.16,
       "tendencia": "→"
     },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 16,
       "evaluaciones": 3,
-      "realizadas": 34,
-      "efectivas": 82.5,
+      "realizadas": 36,
+      "efectivas": 84.5,
       "suspendidas": 4,
       "recuperadas": 2,
       "canceladas": 2,
-      "top": 98.83,
-      "toe": 96.49,
+      "top": 101.17,
+      "toe": 98.83,
       "tendencia": "→"
     },
     {
       "nombre": "Daniela Jaque",
       "pacientes": 16,
       "evaluaciones": 0,
-      "realizadas": 68,
-      "efectivas": 76.0,
+      "realizadas": 69,
+      "efectivas": 78.0,
       "suspendidas": 14,
-      "recuperadas": 8,
-      "canceladas": 6,
-      "top": 86.32,
-      "toe": 80.0,
+      "recuperadas": 9,
+      "canceladas": 5,
+      "top": 87.37,
+      "toe": 82.11,
       "tendencia": "→"
     },
     {
