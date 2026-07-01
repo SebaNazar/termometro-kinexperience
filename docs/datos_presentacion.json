@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 620.0,
-  "toe_grupal": 70.85,
-  "top_grupal": 73.33,
+  "potencial_top": 625.5,
+  "toe_grupal": 71.61,
+  "top_grupal": 73.98,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 70.85
+    "toe": 71.61
   },
   "kines": [
     {
@@ -77,26 +77,26 @@
       "nombre": "Sebastián de la Peña",
       "pacientes": 9,
       "evaluaciones": 2,
-      "realizadas": 38,
-      "efectivas": 59.5,
+      "realizadas": 39,
+      "efectivas": 62.0,
       "suspendidas": 10,
       "recuperadas": 3,
       "canceladas": 7,
-      "top": 70.0,
-      "toe": 62.63,
+      "top": 72.63,
+      "toe": 65.26,
       "tendencia": "→"
     },
     {
       "nombre": "Fernanda Pino",
-      "pacientes": 11,
+      "pacientes": 12,
       "evaluaciones": 1,
-      "realizadas": 44,
-      "efectivas": 55.5,
+      "realizadas": 47,
+      "efectivas": 59.5,
       "suspendidas": 0,
-      "recuperadas": 6,
-      "canceladas": -6,
-      "top": 52.11,
-      "toe": 58.42,
+      "recuperadas": 7,
+      "canceladas": -7,
+      "top": 55.26,
+      "toe": 62.63,
       "tendencia": "→"
     },
     {
