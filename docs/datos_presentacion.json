@@ -1,11 +1,11 @@
 {
   "potencial_total": 845.5,
-  "potencial_top": 625.5,
-  "toe_grupal": 71.61,
-  "top_grupal": 73.98,
+  "potencial_top": 628.0,
+  "toe_grupal": 71.79,
+  "top_grupal": 74.28,
   "trayectoria_mes_actual": {
     "mes": "Junio",
-    "toe": 71.61
+    "toe": 71.79
   },
   "kines": [
     {
@@ -77,13 +77,13 @@
       "nombre": "Sebastián de la Peña",
       "pacientes": 9,
       "evaluaciones": 2,
-      "realizadas": 39,
-      "efectivas": 62.0,
+      "realizadas": 37,
+      "efectivas": 63.5,
       "suspendidas": 10,
-      "recuperadas": 3,
-      "canceladas": 7,
-      "top": 72.63,
-      "toe": 65.26,
+      "recuperadas": 2,
+      "canceladas": 8,
+      "top": 75.26,
+      "toe": 66.84,
       "tendencia": "→"
     },
     {
