@@ -1,24 +1,24 @@
 {
   "potencial_total": 380.0,
-  "potencial_top": 40.5,
-  "toe_grupal": 10.92,
-  "top_grupal": 10.66,
+  "potencial_top": 47.5,
+  "toe_grupal": 12.76,
+  "top_grupal": 12.5,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 10.92
+    "toe": 12.76
   },
   "kines": [
     {
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 13,
-      "efectivas": 17.0,
+      "realizadas": 16,
+      "efectivas": 20.0,
       "suspendidas": 1,
       "recuperadas": 4,
       "canceladas": -3,
-      "top": 14.74,
-      "toe": 17.89,
+      "top": 17.89,
+      "toe": 21.05,
       "tendencia": "→"
     },
     {
@@ -49,15 +49,15 @@
     },
     {
       "nombre": "Sebastián de la Peña",
-      "pacientes": 2,
+      "pacientes": 5,
       "evaluaciones": 0,
-      "realizadas": 1,
-      "efectivas": 2.5,
+      "realizadas": 5,
+      "efectivas": 6.5,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 2.63,
-      "toe": 2.63,
+      "top": 6.84,
+      "toe": 6.84,
       "tendencia": "→"
     }
   ]
