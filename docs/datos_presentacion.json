@@ -1,24 +1,24 @@
 {
   "potencial_total": 380.0,
-  "potencial_top": 68.5,
-  "toe_grupal": 18.55,
-  "top_grupal": 18.03,
+  "potencial_top": 70.5,
+  "toe_grupal": 19.08,
+  "top_grupal": 18.55,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 18.55
+    "toe": 19.08
   },
   "kines": [
     {
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 28,
-      "efectivas": 32.0,
+      "realizadas": 29,
+      "efectivas": 33.0,
       "suspendidas": 1,
       "recuperadas": 4,
       "canceladas": -3,
-      "top": 30.53,
-      "toe": 33.68,
+      "top": 31.58,
+      "toe": 34.74,
       "tendencia": "→"
     },
     {
@@ -49,15 +49,15 @@
     },
     {
       "nombre": "Fernanda Pino",
-      "pacientes": 7,
+      "pacientes": 8,
       "evaluaciones": 0,
-      "realizadas": 9,
-      "efectivas": 11.0,
+      "realizadas": 10,
+      "efectivas": 12.0,
       "suspendidas": 0,
       "recuperadas": 2,
       "canceladas": -2,
-      "top": 9.47,
-      "toe": 11.58,
+      "top": 10.53,
+      "toe": 12.63,
       "tendencia": "→"
     }
   ]
