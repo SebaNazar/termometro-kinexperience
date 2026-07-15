@@ -1,13 +1,26 @@
 {
   "potencial_total": 570.0,
-  "potencial_top": 183.0,
-  "toe_grupal": 31.58,
-  "top_grupal": 32.11,
+  "potencial_top": 185.0,
+  "toe_grupal": 31.93,
+  "top_grupal": 32.46,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 31.58
+    "toe": 31.93
   },
   "kines": [
+    {
+      "nombre": "Katalina Correa",
+      "pacientes": 13,
+      "evaluaciones": 0,
+      "realizadas": 42,
+      "efectivas": 46.0,
+      "suspendidas": 1,
+      "recuperadas": 4,
+      "canceladas": -3,
+      "top": 45.26,
+      "toe": 48.42,
+      "tendencia": "→"
+    },
     {
       "nombre": "Daniela Jaque",
       "pacientes": 16,
@@ -19,19 +32,6 @@
       "canceladas": 9,
       "top": 56.84,
       "toe": 47.37,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Katalina Correa",
-      "pacientes": 13,
-      "evaluaciones": 0,
-      "realizadas": 40,
-      "efectivas": 44.0,
-      "suspendidas": 1,
-      "recuperadas": 4,
-      "canceladas": -3,
-      "top": 43.16,
-      "toe": 46.32,
       "tendencia": "→"
     },
     {
