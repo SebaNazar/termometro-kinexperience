@@ -1,13 +1,26 @@
 {
   "potencial_total": 570.0,
-  "potencial_top": 192.0,
-  "toe_grupal": 33.16,
-  "top_grupal": 33.68,
+  "potencial_top": 210.5,
+  "toe_grupal": 36.23,
+  "top_grupal": 36.93,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 33.16
+    "toe": 36.23
   },
   "kines": [
+    {
+      "nombre": "Guillermo Silva",
+      "pacientes": 18,
+      "evaluaciones": 0,
+      "realizadas": 49,
+      "efectivas": 52.0,
+      "suspendidas": 3,
+      "recuperadas": 0,
+      "canceladas": 3,
+      "top": 57.89,
+      "toe": 54.74,
+      "tendencia": "→"
+    },
     {
       "nombre": "Daniela Jaque",
       "pacientes": 16,
@@ -35,19 +48,6 @@
       "tendencia": "→"
     },
     {
-      "nombre": "Guillermo Silva",
-      "pacientes": 17,
-      "evaluaciones": 0,
-      "realizadas": 35,
-      "efectivas": 36.5,
-      "suspendidas": 2,
-      "recuperadas": 0,
-      "canceladas": 2,
-      "top": 40.53,
-      "toe": 38.42,
-      "tendencia": "→"
-    },
-    {
       "nombre": "Francisca Campos",
       "pacientes": 8,
       "evaluaciones": 0,
@@ -64,13 +64,13 @@
       "nombre": "Fernanda Pino",
       "pacientes": 8,
       "evaluaciones": 0,
-      "realizadas": 10,
-      "efectivas": 15.0,
+      "realizadas": 12,
+      "efectivas": 17.0,
       "suspendidas": 0,
       "recuperadas": 5,
       "canceladas": -5,
-      "top": 10.53,
-      "toe": 15.79,
+      "top": 12.63,
+      "toe": 17.89,
       "tendencia": "→"
     },
     {
