@@ -11,3 +11,8 @@ docs/refuerzo_*.txt
 CLAUDE.md
 .Rhistory
 memory/
+
+node_modules/
+*.pptx
+LOGO-BLANCO.png
+LOGO-NEGRO.png
