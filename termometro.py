@@ -1,8 +1,9 @@
 """
 Termómetro Kinexperience — Motor de cálculo mensual
-Uso: python3 termometro.py
+Uso: python3 termometro.py [--mes 6] [--año 2026]
 """
 
+import argparse
 import glob
 import os
 import sys
@@ -556,6 +557,11 @@ def generar_index(docs_dir: str, config: dict) -> str:
 # ── MAIN ───────────────────────────────────────────────────────────────────────
 
 def main():
+    parser = argparse.ArgumentParser(description="Termómetro Kinexperience")
+    parser.add_argument("--mes", type=int, help="Número de mes a analizar (1-12). Si se omite, se auto-detecta.")
+    parser.add_argument("--año", type=int, help="Año a analizar. Requerido si se usa --mes.")
+    args = parser.parse_args()
+
     print("=" * 60)
     print("  TERMÓMETRO KINEXPERIENCE")
     print("=" * 60)
@@ -564,11 +570,19 @@ def main():
     gc = conectar()
     df_raw = cargar_registro(gc)
 
-    mes_num_det, anio_det = detectar_mes_activo(df_raw)
+    if args.mes:
+        mes_num_det = args.mes
+        anio_det = args.año or config["año"]
+        if mes_num_det not in MESES_NUM_A_ES:
+            sys.exit(f"ERROR: --mes debe ser entre 1 y 12 (recibido: {mes_num_det})")
+        print(f"\nMes forzado:     {MESES_NUM_A_ES[mes_num_det]} {anio_det}")
+    else:
+        mes_num_det, anio_det = detectar_mes_activo(df_raw)
+        print(f"\nMes detectado:   {MESES_NUM_A_ES[mes_num_det]} {anio_det}")
+
     config["mes"] = MESES_NUM_A_ES[mes_num_det]
     config["año"] = anio_det
 
-    print(f"\nMes detectado:   {config['mes']} {config['año']}")
     print(f"Días hábiles:    {config['dias_habiles']}")
     print(f"Staff oficial:   {len(config['kines_staff'])} kines")
 

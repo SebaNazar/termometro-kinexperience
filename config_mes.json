@@ -1,7 +1,7 @@
 {
-  "mes": "Mayo",
+  "mes": "Junio",
   "año": 2026,
-  "dias_habiles": 19,
+  "dias_habiles": 21,
   "kines_staff": [
     "Sebastián de la Peña",
     "Patricio Orrego",
@@ -15,7 +15,9 @@
   ],
   "kines_refuerzo": [
     "Marcelo Lagos",
-    "Andrés Mardones"
+    "Andrés Mardones",
+    "Javiera Poblete",
+    "Macarena Nuñez"
   ],
   "excepciones_capacidad": {
     "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 },
@@ -25,12 +27,12 @@
   "meta_TOP": 0.79,
   "notas_mes": "",
   "presentacion": {
-    "mes_label": "Mayo 2026",
+    "mes_label": "Junio 2026",
     "frase_motivacional": "Seguir equilibrando la carga del equipo",
     "meta_toe_siguiente": 77,
     "meta_top_siguiente": 79,
     "meta_siguiente_nombre": "Julio 2026",
-    "frase_meta_siguiente": "fidelizar a nuestros pacientes"
+    "frase_meta_siguiente": "Juntos para arriba"
   },
   "pagos": {
     "rut_empresa": "77.036.223-7",
@@ -38,9 +40,9 @@
     "bono_bencina_por_sesion": 1000,
     "valor_sesion_refuerzo_bruto": 21053,
     "porcentaje_boleta_honorarios": 0.1525,
-    "trimestre_actual": "T2-2026",
-    "mes_cierre_trimestre": "Mayo",
-    "toe_grupal_meses_trimestre": [0.736, 0.746, 0.0],
+    "trimestre_actual": "T3-2026",
+    "mes_cierre_trimestre": "Agosto",
+    "toe_grupal_meses_trimestre": [0.0, 0.0, 0.0],
     "perfiles_especiales": {
       "Patricio Orrego": {
         "perfil": "kine_antiguo",
