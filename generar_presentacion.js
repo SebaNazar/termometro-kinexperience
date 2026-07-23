@@ -27,18 +27,16 @@ const MESES_CORTOS_ARR = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep",
 
 function leerTOEDesdeHTML(mes, año) {
   const mm = String(mes).padStart(2, "0");
-  const filePath = path.join("docs", `termometro_${mm}${año}.html`);
+  const filePath = path.join("docs", `termometro_${año}_${mm}.html`);
   if (!fs.existsSync(filePath)) {
-    console.warn(`[trayectoria] Archivo no encontrado: ${filePath}`);
-    return null;
+    return { error: `archivo no encontrado: ${filePath}` };
   }
   const html = fs.readFileSync(filePath, "utf8");
   const match = html.match(/TOE Grupal[\s\S]*?<div class="kpi-value"[^>]*>([\d.]+)%<\/div>/);
   if (!match) {
-    console.warn(`[trayectoria] No se encontró TOE Grupal en ${filePath}`);
-    return null;
+    return { error: `no se encontró "TOE Grupal" en ${filePath}` };
   }
-  return parseFloat(match[1]);
+  return { toe: parseFloat(match[1]) };
 }
 
 const trayectoriaHistorica = [
@@ -50,18 +48,33 @@ const trayectoriaHistorica = [
 ];
 
 // Agrega dinámicamente desde Feb-26 hasta el mes anterior al configurado (Ene-26 es hardcodeado)
+const mesesFaltantes = [];
 {
   const mesActualNum = MESES_NUM[config.mes];
   const añoActual = config.año;
   let m = 2, a = 2026;
   while (a < añoActual || (a === añoActual && m < mesActualNum)) {
-    const toe = leerTOEDesdeHTML(m, a);
-    if (toe !== null) {
-      trayectoriaHistorica.push({ mes: `${MESES_CORTOS_ARR[m - 1]}-${String(a).slice(-2)}`, toe });
+    const label = `${MESES_CORTOS_ARR[m - 1]}-${String(a).slice(-2)}`;
+    const resultado = leerTOEDesdeHTML(m, a);
+    if (resultado.error) {
+      mesesFaltantes.push(`${label}: ${resultado.error}`);
+    } else {
+      trayectoriaHistorica.push({ mes: label, toe: resultado.toe });
     }
     m++;
     if (m > 12) { m = 1; a++; }
   }
+}
+
+if (mesesFaltantes.length > 0) {
+  console.error("\n" + "═".repeat(70));
+  console.error("  TRAYECTORIA HISTÓRICA INCOMPLETA — abortando generación");
+  console.error("═".repeat(70));
+  console.error("  No se pudo leer el TOE de estos meses:");
+  mesesFaltantes.forEach(m => console.error(`   - ${m}`));
+  console.error("  Los gráficos de 'Trayectoria histórica' y 'Zoom' saldrían con huecos.");
+  console.error("═".repeat(70) + "\n");
+  process.exit(1);
 }
 const trayectoria_mes_actual = {
   ...datos.trayectoria_mes_actual,
@@ -257,7 +270,7 @@ pres.layout = "LAYOUT_WIDE"; // 13.3" × 7.5"
   const mesAnteriorIdx = mesIdx === 0 ? 11 : mesIdx - 1;
   const añoAnterior = mesIdx === 0 ? config.año - 1 : config.año;
   const mmAnterior = String(mesAnteriorIdx + 1).padStart(2, "0");
-  const csvAnterior = path.join("docs", `resumen_${mmAnterior}${añoAnterior}.csv`);
+  const csvAnterior = path.join("docs", `resumen_${añoAnterior}_${mmAnterior}.csv`);
 
   let anterior = {};
   if (fs.existsSync(csvAnterior)) {

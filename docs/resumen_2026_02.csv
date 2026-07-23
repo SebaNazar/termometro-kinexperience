@@ -1,0 +1,12 @@
+﻿kine,pacientes_unicos,evaluaciones,realizadas,suspendidas,recuperadas,canceladas_real,grupales,efectivas,programadas,capacidad,TOP_individual,TOE_individual,ratio_efectividad
+Marcia Reveco,9,0,31,6,7,-1,0,38.0,37.0,100.0,0.37,0.38,1.027
+Daniela Jaque,12,3,49,2,4,-2,0,56.0,54.0,100.0,0.54,0.56,1.037
+José Aguilar,13,0,90,3,5,-2,0,95.0,93.0,100.0,0.93,0.95,1.0215
+Patricio Orrego,21,3,80,8,0,8,0,83.0,91.0,90.0,1.0111,0.9222,0.9121
+Sebastián de la Peña,10,1,42,7,3,4,0,46.0,50.0,100.0,0.5,0.46,0.92
+Andrés Mardones,11,2,26,2,3,-1,0,31.0,30.0,100.0,0.3,0.31,1.0333
+Marcelo Lagos,2,0,15,0,0,0,0,15.0,15.0,100.0,0.15,0.15,1.0
+Katalina Correa,13,2,49,3,0,3,0,51.0,54.0,100.0,0.54,0.51,0.9444
+Guillermo Silva,15,0,65,8,5,3,0,70.0,73.0,100.0,0.73,0.7,0.9589
+Francisco Vásquez,2,0,14,2,0,2,0,14.0,16.0,100.0,0.16,0.14,0.875
+Mauricio Arce,2,0,16,0,0,0,0,16.0,16.0,100.0,0.16,0.16,1.0

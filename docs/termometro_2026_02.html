@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termómetro Kinexperience — Febrero 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+    .subtitulo { color: #94a3b8; margin-bottom: 2rem; font-size: 0.9rem; }
+    .alerta { background: #7c2d12; border-left: 4px solid #f97316; padding: 0.75rem 1rem;
+               border-radius: 4px; margin-bottom: 1.5rem; }
+    .kpis { display: flex; gap: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+    .kpi { background: #1e293b; border-radius: 8px; padding: 1.25rem 1.75rem; flex: 1; min-width: 160px; }
+    .kpi-label { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: .05em; }
+    .kpi-value { font-size: 2rem; font-weight: 700; margin-top: 0.25rem; }
+    .kpi-meta { font-size: 0.75rem; color: #64748b; margin-top: 0.15rem; }
+    table { width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; }
+    thead tr { background: #334155; }
+    th { padding: 0.75rem 0.9rem; text-align: left; font-size: 0.75rem;
+          text-transform: uppercase; letter-spacing: .05em; color: #94a3b8; }
+    td { padding: 0.65rem 0.9rem; font-size: 0.875rem; border-top: 1px solid #0f172a; }
+    tr:hover td { background: #263347; }
+    .notas { margin-top: 2rem; color: #64748b; font-size: 0.8rem; }
+    .footer { margin-top: 3rem; color: #334155; font-size: 0.7rem; text-align: center; }
+    .btn-actualizar { display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1.25rem;
+      background: #3b82f6; color: #fff; border-radius: 6px;
+      font-size: 0.85rem; text-decoration: none; transition: background 0.2s; }
+    .btn-actualizar:hover { background: #2563eb; }
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; }
+    .header-logo { height: 55px; width: auto; flex-shrink: 0; object-fit: contain; }
+    .header-text h1 { font-size: 1.8rem; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-text">
+      <h1>Termómetro Kinexperience</h1>
+      <div class="subtitulo">Febrero 2026 &nbsp;·&nbsp; 20 días hábiles
+        
+      </div>
+    </div>
+    <img class="header-logo"
+      src="https://www.kinexperience.cl/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FLOGO-FONDO-OSCURO.81c302e1.png&w=128&q=75"
+      alt="Kinexperience">
+  </div>
+  <a class="btn-actualizar" href="https://github.com/SebaNazar/termometro-kinexperience/actions/workflows/termometro.yml" target="_blank" rel="noopener">Actualizar datos</a>
+
+  <div class="alerta">⚠️ 16 sesiones con fecha sospechosa detectadas. Revisar antes de cerrar el mes.</div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="kpi-label">TOE Grupal</div>
+      <div class="kpi-value" style="color:#ef4444">59.5%</div>
+      <div class="kpi-meta">Meta: 74.0% &nbsp; (-14.5%)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">TOP Grupal</div>
+      <div class="kpi-value" style="color:#ef4444">61.0%</div>
+      <div class="kpi-meta">Meta: 77.0% &nbsp; (-16.0%)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Efectivas Staff</div>
+      <div class="kpi-value">470</div>
+      <div class="kpi-meta">de 482 programadas</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Potencial TOP</div>
+      <div class="kpi-value">790</div>
+      <div class="kpi-meta">capacidad total staff</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Kinesiólogo</th>
+        <th>Pacientes</th>
+        <th>Eval.</th>
+        <th>Efectivas</th>
+        <th>Programadas</th>
+        <th>Suspendidas</th>
+        <th>Recuperadas</th>
+        <th>Canceladas</th>
+        <th>Capacidad</th>
+        <th>TOP</th>
+        <th>TOE</th>
+        <th>% Efectividad</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>José Aguilar</td>
+          <td>13</td>
+          <td>0</td>
+          <td>95</td>
+          <td>93</td>
+          <td>3</td>
+          <td>5</td>
+          <td>-2</td>
+          <td>100</td>
+          <td style="color:#22c55e;font-weight:bold">93.0%</td>
+          <td style="color:#22c55e;font-weight:bold">95.0%</td>
+          <td>102.2%</td>
+        </tr>
+        <tr>
+          <td>Patricio Orrego</td>
+          <td>21</td>
+          <td>3</td>
+          <td>83</td>
+          <td>91</td>
+          <td>8</td>
+          <td>0</td>
+          <td>8</td>
+          <td>90</td>
+          <td style="color:#22c55e;font-weight:bold">101.1%</td>
+          <td style="color:#22c55e;font-weight:bold">92.2%</td>
+          <td>91.2%</td>
+        </tr>
+        <tr>
+          <td>Guillermo Silva</td>
+          <td>15</td>
+          <td>0</td>
+          <td>70</td>
+          <td>73</td>
+          <td>8</td>
+          <td>5</td>
+          <td>3</td>
+          <td>100</td>
+          <td style="color:#f59e0b;font-weight:bold">73.0%</td>
+          <td style="color:#f59e0b;font-weight:bold">70.0%</td>
+          <td>95.9%</td>
+        </tr>
+        <tr>
+          <td>Daniela Jaque</td>
+          <td>12</td>
+          <td>3</td>
+          <td>56</td>
+          <td>54</td>
+          <td>2</td>
+          <td>4</td>
+          <td>-2</td>
+          <td>100</td>
+          <td style="color:#ef4444;font-weight:bold">54.0%</td>
+          <td style="color:#ef4444;font-weight:bold">56.0%</td>
+          <td>103.7%</td>
+        </tr>
+        <tr>
+          <td>Katalina Correa</td>
+          <td>13</td>
+          <td>2</td>
+          <td>51</td>
+          <td>54</td>
+          <td>3</td>
+          <td>0</td>
+          <td>3</td>
+          <td>100</td>
+          <td style="color:#ef4444;font-weight:bold">54.0%</td>
+          <td style="color:#ef4444;font-weight:bold">51.0%</td>
+          <td>94.4%</td>
+        </tr>
+        <tr>
+          <td>Sebastián de la Peña</td>
+          <td>10</td>
+          <td>1</td>
+          <td>46</td>
+          <td>50</td>
+          <td>7</td>
+          <td>3</td>
+          <td>4</td>
+          <td>100</td>
+          <td style="color:#ef4444;font-weight:bold">50.0%</td>
+          <td style="color:#ef4444;font-weight:bold">46.0%</td>
+          <td>92.0%</td>
+        </tr>
+        <tr>
+          <td>Marcia Reveco</td>
+          <td>9</td>
+          <td>0</td>
+          <td>38</td>
+          <td>37</td>
+          <td>6</td>
+          <td>7</td>
+          <td>-1</td>
+          <td>100</td>
+          <td style="color:#ef4444;font-weight:bold">37.0%</td>
+          <td style="color:#ef4444;font-weight:bold">38.0%</td>
+          <td>102.7%</td>
+        </tr>
+        <tr>
+          <td>Andrés Mardones</td>
+          <td>11</td>
+          <td>2</td>
+          <td>31</td>
+          <td>30</td>
+          <td>2</td>
+          <td>3</td>
+          <td>-1</td>
+          <td>100</td>
+          <td style="color:#ef4444;font-weight:bold">30.0%</td>
+          <td style="color:#ef4444;font-weight:bold">31.0%</td>
+          <td>103.3%</td>
+        </tr>
+    </tbody>
+  </table>
+
+  <div class="notas">* TOE = Efectivas / Capacidad &nbsp;|&nbsp; TOP = Programadas / Capacidad &nbsp;|&nbsp; % Efectividad = Efectivas / Programadas (uso interno)</div>
+  <div class="footer">Generado el 05/04/2026 21:02 por termometro.py</div>
+
+</body>
+</html>
