@@ -19,7 +19,7 @@
       "canceladas": 3,
       "top": 96.19,
       "toe": 93.33,
-      "tendencia": "→"
+      "tendencia": "↑"
     },
     {
       "nombre": "Patricio Orrego",
@@ -32,7 +32,7 @@
       "canceladas": 2,
       "top": 91.53,
       "toe": 89.42,
-      "tendencia": "→"
+      "tendencia": "↑"
     },
     {
       "nombre": "Daniela Jaque",
@@ -45,7 +45,7 @@
       "canceladas": 4,
       "top": 80.95,
       "toe": 77.14,
-      "tendencia": "→"
+      "tendencia": "↑"
     },
     {
       "nombre": "Katalina Correa",
@@ -58,7 +58,7 @@
       "canceladas": 6,
       "top": 82.86,
       "toe": 77.14,
-      "tendencia": "→"
+      "tendencia": "↓"
     },
     {
       "nombre": "Francisca Campos",
@@ -84,7 +84,7 @@
       "canceladas": 8,
       "top": 68.1,
       "toe": 60.48,
-      "tendencia": "→"
+      "tendencia": "↑"
     },
     {
       "nombre": "Fernanda Pino",
@@ -97,7 +97,7 @@
       "canceladas": -7,
       "top": 50.0,
       "toe": 56.67,
-      "tendencia": "→"
+      "tendencia": "↓"
     },
     {
       "nombre": "Guillermo Silva",
@@ -110,7 +110,7 @@
       "canceladas": 1,
       "top": 36.67,
       "toe": 35.71,
-      "tendencia": "→"
+      "tendencia": "↓"
     },
     {
       "nombre": "Marcia Reveco",
@@ -123,7 +123,7 @@
       "canceladas": 2,
       "top": 34.29,
       "toe": 32.38,
-      "tendencia": "→"
+      "tendencia": "↓"
     }
   ]
 }
