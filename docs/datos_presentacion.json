@@ -1,11 +1,11 @@
 {
   "potencial_total": 735.0,
-  "potencial_top": 276.5,
-  "toe_grupal": 36.12,
-  "top_grupal": 37.62,
+  "potencial_top": 298.5,
+  "toe_grupal": 39.12,
+  "top_grupal": 40.61,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 36.12
+    "toe": 39.12
   },
   "kines": [
     {
@@ -25,13 +25,13 @@
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 0,
-      "realizadas": 58,
-      "efectivas": 62.0,
+      "realizadas": 59,
+      "efectivas": 63.0,
       "suspendidas": 1,
       "recuperadas": 4,
       "canceladas": -3,
-      "top": 56.19,
-      "toe": 59.05,
+      "top": 57.14,
+      "toe": 60.0,
       "tendencia": "↓"
     },
     {
@@ -48,6 +48,19 @@
       "tendencia": "↓"
     },
     {
+      "nombre": "Francisca Campos",
+      "pacientes": 9,
+      "evaluaciones": 0,
+      "realizadas": 48,
+      "efectivas": 48.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 45.71,
+      "toe": 45.71,
+      "tendencia": "↓"
+    },
+    {
       "nombre": "Sebastián de la Peña",
       "pacientes": 7,
       "evaluaciones": 0,
@@ -58,19 +71,6 @@
       "canceladas": 3,
       "top": 35.71,
       "toe": 32.86,
-      "tendencia": "↓"
-    },
-    {
-      "nombre": "Francisca Campos",
-      "pacientes": 8,
-      "evaluaciones": 0,
-      "realizadas": 27,
-      "efectivas": 27.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 25.71,
-      "toe": 25.71,
       "tendencia": "↓"
     },
     {
