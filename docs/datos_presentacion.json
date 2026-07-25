@@ -1,13 +1,26 @@
 {
   "potencial_total": 735.0,
-  "potencial_top": 329.0,
-  "toe_grupal": 43.27,
-  "top_grupal": 44.76,
+  "potencial_top": 339.0,
+  "toe_grupal": 44.49,
+  "top_grupal": 46.12,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 43.27
+    "toe": 44.49
   },
   "kines": [
+    {
+      "nombre": "Guillermo Silva",
+      "pacientes": 18,
+      "evaluaciones": 0,
+      "realizadas": 75,
+      "efectivas": 78.0,
+      "suspendidas": 7,
+      "recuperadas": 0,
+      "canceladas": 7,
+      "top": 80.95,
+      "toe": 74.29,
+      "tendencia": "↑"
+    },
     {
       "nombre": "Daniela Jaque",
       "pacientes": 16,
@@ -20,19 +33,6 @@
       "top": 82.86,
       "toe": 73.33,
       "tendencia": "↓"
-    },
-    {
-      "nombre": "Guillermo Silva",
-      "pacientes": 18,
-      "evaluaciones": 0,
-      "realizadas": 66,
-      "efectivas": 69.0,
-      "suspendidas": 6,
-      "recuperadas": 0,
-      "canceladas": 6,
-      "top": 71.43,
-      "toe": 65.71,
-      "tendencia": "↑"
     },
     {
       "nombre": "Katalina Correa",
