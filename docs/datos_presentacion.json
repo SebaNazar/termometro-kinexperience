@@ -1,13 +1,26 @@
 {
-  "potencial_total": 735.0,
-  "potencial_top": 344.0,
-  "toe_grupal": 45.31,
-  "top_grupal": 46.8,
+  "potencial_total": 829.5,
+  "potencial_top": 397.0,
+  "toe_grupal": 45.57,
+  "top_grupal": 47.86,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 45.31
+    "toe": 45.57
   },
   "kines": [
+    {
+      "nombre": "Daniela Jaque",
+      "pacientes": 16,
+      "evaluaciones": 0,
+      "realizadas": 75,
+      "efectivas": 78.0,
+      "suspendidas": 13,
+      "recuperadas": 3,
+      "canceladas": 10,
+      "top": 83.81,
+      "toe": 74.29,
+      "tendencia": "↓"
+    },
     {
       "nombre": "Guillermo Silva",
       "pacientes": 18,
@@ -20,19 +33,6 @@
       "top": 80.95,
       "toe": 74.29,
       "tendencia": "↑"
-    },
-    {
-      "nombre": "Daniela Jaque",
-      "pacientes": 16,
-      "evaluaciones": 0,
-      "realizadas": 74,
-      "efectivas": 77.0,
-      "suspendidas": 13,
-      "recuperadas": 3,
-      "canceladas": 10,
-      "top": 82.86,
-      "toe": 73.33,
-      "tendencia": "↓"
     },
     {
       "nombre": "Katalina Correa",
@@ -61,16 +61,29 @@
       "tendencia": "↓"
     },
     {
+      "nombre": "Patricio Orrego",
+      "pacientes": 11,
+      "evaluaciones": 0,
+      "realizadas": 10,
+      "efectivas": 38.5,
+      "suspendidas": 8,
+      "recuperadas": 0,
+      "canceladas": 8,
+      "top": 49.21,
+      "toe": 40.74,
+      "tendencia": "↓"
+    },
+    {
       "nombre": "Sebastián de la Peña",
       "pacientes": 7,
       "evaluaciones": 0,
-      "realizadas": 23,
-      "efectivas": 35.0,
-      "suspendidas": 3,
-      "recuperadas": 0,
+      "realizadas": 26,
+      "efectivas": 40.5,
+      "suspendidas": 4,
+      "recuperadas": 1,
       "canceladas": 3,
-      "top": 36.19,
-      "toe": 33.33,
+      "top": 41.43,
+      "toe": 38.57,
       "tendencia": "↓"
     },
     {
