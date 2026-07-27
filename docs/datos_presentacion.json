@@ -1,25 +1,25 @@
 {
   "potencial_total": 829.5,
-  "potencial_top": 408.0,
-  "toe_grupal": 46.65,
-  "top_grupal": 49.19,
+  "potencial_top": 414.0,
+  "toe_grupal": 47.38,
+  "top_grupal": 49.91,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 46.65
+    "toe": 47.38
   },
   "kines": [
     {
       "nombre": "Daniela Jaque",
       "pacientes": 16,
       "evaluaciones": 0,
-      "realizadas": 75,
-      "efectivas": 78.0,
-      "suspendidas": 13,
-      "recuperadas": 3,
+      "realizadas": 76,
+      "efectivas": 80.0,
+      "suspendidas": 14,
+      "recuperadas": 4,
       "canceladas": 10,
-      "top": 83.81,
-      "toe": 74.29,
-      "tendencia": "↓"
+      "top": 85.71,
+      "toe": 76.19,
+      "tendencia": "→"
     },
     {
       "nombre": "Guillermo Silva",
@@ -38,13 +38,13 @@
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 0,
-      "realizadas": 63,
-      "efectivas": 67.0,
+      "realizadas": 65,
+      "efectivas": 69.0,
       "suspendidas": 1,
       "recuperadas": 4,
       "canceladas": -3,
-      "top": 60.95,
-      "toe": 63.81,
+      "top": 62.86,
+      "toe": 65.71,
       "tendencia": "↓"
     },
     {
@@ -75,15 +75,15 @@
     },
     {
       "nombre": "Sebastián de la Peña",
-      "pacientes": 7,
-      "evaluaciones": 0,
+      "pacientes": 8,
+      "evaluaciones": 1,
       "realizadas": 26,
-      "efectivas": 40.5,
+      "efectivas": 41.5,
       "suspendidas": 4,
       "recuperadas": 1,
       "canceladas": 3,
-      "top": 41.43,
-      "toe": 38.57,
+      "top": 42.38,
+      "toe": 39.52,
       "tendencia": "↓"
     },
     {
@@ -103,13 +103,13 @@
       "nombre": "Marcia Reveco",
       "pacientes": 5,
       "evaluaciones": 2,
-      "realizadas": 5,
-      "efectivas": 7.0,
+      "realizadas": 6,
+      "efectivas": 8.0,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 6.67,
-      "toe": 6.67,
+      "top": 7.62,
+      "toe": 7.62,
       "tendencia": "↓"
     }
   ]
