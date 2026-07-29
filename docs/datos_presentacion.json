@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 463.0,
-  "toe_grupal": 47.73,
-  "top_grupal": 49.55,
+  "potencial_top": 467.0,
+  "toe_grupal": 48.15,
+  "top_grupal": 49.97,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 47.73
+    "toe": 48.15
   },
   "kines": [
     {
@@ -38,14 +38,14 @@
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 0,
-      "realizadas": 74,
-      "efectivas": 78.0,
-      "suspendidas": 1,
-      "recuperadas": 4,
+      "realizadas": 76,
+      "efectivas": 82.0,
+      "suspendidas": 3,
+      "recuperadas": 6,
       "canceladas": -3,
-      "top": 71.43,
-      "toe": 74.29,
-      "tendencia": "↓"
+      "top": 75.24,
+      "toe": 78.1,
+      "tendencia": "→"
     },
     {
       "nombre": "Francisca Campos",
