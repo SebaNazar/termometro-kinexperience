@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 481.0,
-  "toe_grupal": 49.87,
-  "top_grupal": 51.47,
+  "potencial_top": 496.5,
+  "toe_grupal": 51.52,
+  "top_grupal": 53.13,
   "trayectoria_mes_actual": {
     "mes": "Julio",
-    "toe": 49.87
+    "toe": 51.52
   },
   "kines": [
     {
@@ -22,6 +22,19 @@
       "tendencia": "↑"
     },
     {
+      "nombre": "Katalina Correa",
+      "pacientes": 14,
+      "evaluaciones": 0,
+      "realizadas": 79,
+      "efectivas": 85.0,
+      "suspendidas": 3,
+      "recuperadas": 6,
+      "canceladas": -3,
+      "top": 78.1,
+      "toe": 80.95,
+      "tendencia": "↑"
+    },
+    {
       "nombre": "Guillermo Silva",
       "pacientes": 19,
       "evaluaciones": 0,
@@ -35,17 +48,17 @@
       "tendencia": "↑"
     },
     {
-      "nombre": "Katalina Correa",
-      "pacientes": 14,
+      "nombre": "Patricio Orrego",
+      "pacientes": 12,
       "evaluaciones": 0,
-      "realizadas": 76,
-      "efectivas": 82.0,
-      "suspendidas": 3,
-      "recuperadas": 6,
-      "canceladas": -3,
-      "top": 75.24,
-      "toe": 78.1,
-      "tendencia": "→"
+      "realizadas": 24,
+      "efectivas": 57.0,
+      "suspendidas": 10,
+      "recuperadas": 0,
+      "canceladas": 10,
+      "top": 70.9,
+      "toe": 60.32,
+      "tendencia": "↓"
     },
     {
       "nombre": "Francisca Campos",
@@ -58,19 +71,6 @@
       "canceladas": 0,
       "top": 56.19,
       "toe": 56.19,
-      "tendencia": "↓"
-    },
-    {
-      "nombre": "Patricio Orrego",
-      "pacientes": 12,
-      "evaluaciones": 0,
-      "realizadas": 17,
-      "efectivas": 45.5,
-      "suspendidas": 10,
-      "recuperadas": 0,
-      "canceladas": 10,
-      "top": 58.73,
-      "toe": 48.15,
       "tendencia": "↓"
     },
     {
@@ -116,13 +116,13 @@
       "nombre": "Marcia Reveco",
       "pacientes": 9,
       "evaluaciones": 4,
-      "realizadas": 12,
-      "efectivas": 16.0,
+      "realizadas": 13,
+      "efectivas": 17.0,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 15.24,
-      "toe": 15.24,
+      "top": 16.19,
+      "toe": 16.19,
       "tendencia": "↓"
     }
   ]
