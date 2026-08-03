@@ -1,13 +1,26 @@
 {
   "potencial_total": 315.0,
-  "potencial_top": 8.0,
-  "toe_grupal": 2.22,
-  "top_grupal": 2.54,
+  "potencial_top": 11.0,
+  "toe_grupal": 3.17,
+  "top_grupal": 3.49,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 2.22
+    "toe": 3.17
   },
   "kines": [
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 5,
+      "evaluaciones": 0,
+      "realizadas": 5,
+      "efectivas": 5.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 4.76,
+      "toe": 4.76,
+      "tendencia": "↓"
+    },
     {
       "nombre": "José Aguilar",
       "pacientes": 5,
@@ -19,19 +32,6 @@
       "canceladas": 1,
       "top": 4.76,
       "toe": 3.81,
-      "tendencia": "↓"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 2,
-      "evaluaciones": 0,
-      "realizadas": 2,
-      "efectivas": 2.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 1.9,
-      "toe": 1.9,
       "tendencia": "↓"
     },
     {
