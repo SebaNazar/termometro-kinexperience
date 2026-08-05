@@ -1,37 +1,50 @@
 {
-  "potencial_total": 619.5,
-  "potencial_top": 40.0,
-  "toe_grupal": 6.3,
-  "top_grupal": 6.46,
+  "potencial_total": 649.0,
+  "potencial_top": 46.0,
+  "toe_grupal": 7.09,
+  "top_grupal": 7.09,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 6.3
+    "toe": 7.09
   },
   "kines": [
     {
       "nombre": "José Aguilar",
-      "pacientes": 10,
+      "pacientes": 12,
       "evaluaciones": 0,
-      "realizadas": 9,
-      "efectivas": 9.0,
+      "realizadas": 12,
+      "efectivas": 12.0,
       "suspendidas": 1,
       "recuperadas": 0,
       "canceladas": 1,
-      "top": 9.52,
-      "toe": 8.57,
+      "top": 11.82,
+      "toe": 10.91,
       "tendencia": "↓"
     },
     {
       "nombre": "Katalina Correa",
       "pacientes": 9,
       "evaluaciones": 0,
-      "realizadas": 9,
-      "efectivas": 9.0,
+      "realizadas": 10,
+      "efectivas": 10.0,
       "suspendidas": 1,
       "recuperadas": 0,
       "canceladas": 1,
-      "top": 9.52,
-      "toe": 8.57,
+      "top": 10.0,
+      "toe": 9.09,
+      "tendencia": "↓"
+    },
+    {
+      "nombre": "Marcia Reveco",
+      "pacientes": 7,
+      "evaluaciones": 1,
+      "realizadas": 8,
+      "efectivas": 9.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 8.18,
+      "toe": 8.18,
       "tendencia": "↓"
     },
     {
@@ -43,21 +56,8 @@
       "suspendidas": 1,
       "recuperadas": 0,
       "canceladas": 1,
-      "top": 7.94,
-      "toe": 6.88,
-      "tendencia": "↓"
-    },
-    {
-      "nombre": "Marcia Reveco",
-      "pacientes": 7,
-      "evaluaciones": 1,
-      "realizadas": 6,
-      "efectivas": 7.0,
-      "suspendidas": 0,
-      "recuperadas": 0,
-      "canceladas": 0,
-      "top": 6.67,
-      "toe": 6.67,
+      "top": 7.58,
+      "toe": 6.57,
       "tendencia": "↓"
     },
     {
@@ -69,8 +69,8 @@
       "suspendidas": 0,
       "recuperadas": 1,
       "canceladas": -1,
-      "top": 4.29,
-      "toe": 5.24,
+      "top": 4.09,
+      "toe": 5.0,
       "tendencia": "↓"
     },
     {
@@ -78,12 +78,12 @@
       "pacientes": 2,
       "evaluaciones": 0,
       "realizadas": 1,
-      "efectivas": 2.0,
+      "efectivas": 3.0,
       "suspendidas": 0,
-      "recuperadas": 1,
-      "canceladas": -1,
-      "top": 0.95,
-      "toe": 1.9,
+      "recuperadas": 2,
+      "canceladas": -2,
+      "top": 0.91,
+      "toe": 2.73,
       "tendencia": "↓"
     }
   ]
