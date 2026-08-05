@@ -1,7 +1,7 @@
 {
-  "mes": "Junio",
+  "mes": "Julio",
   "año": 2026,
-  "dias_habiles": 21,
+  "dias_habiles": 22,
   "kines_staff": [
     "Sebastián de la Peña",
     "Patricio Orrego",
@@ -17,22 +17,25 @@
     "Marcelo Lagos",
     "Andrés Mardones",
     "Javiera Poblete",
-    "Macarena Nuñez"
+    "Macarena Núñez",
+    "Álvaro Toledo",
+    "María Consuelo Harz",
+    "Camila Toledo",
+    "Cristóbal Alfaro"
   ],
   "excepciones_capacidad": {
-    "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 },
-    "": { "tipo": "fecha_hasta", "fecha": "2026-03-20" }
+    "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 }
   },
-  "meta_TOE": 0.77,
-  "meta_TOP": 0.79,
+  "meta_TOE": 0.70,
+  "meta_TOP": 0.72,
   "notas_mes": "",
   "presentacion": {
-    "mes_label": "Junio 2026",
-    "frase_motivacional": "Seguir equilibrando la carga del equipo",
+    "mes_label": "Julio 2026",
+    "frase_motivacional": "Juntos para arriba",
     "meta_toe_siguiente": 70,
     "meta_top_siguiente": 72,
-    "meta_siguiente_nombre": "Julio 2026",
-    "frase_meta_siguiente": "Juntos para arriba"
+    "meta_siguiente_nombre": "Agosto 2026",
+    "frase_meta_siguiente": "Seguir recuperando terreno"
   },
   "pagos": {
     "rut_empresa": "77.036.223-7",
