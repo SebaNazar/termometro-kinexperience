@@ -25,6 +25,40 @@ const MESES_NUM = {
 };
 const MESES_CORTOS_ARR = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
 
+// ── Validación de coherencia config ↔ datos ───────────────────
+// Los números salen de docs/datos_presentacion.json; los rótulos y el mes
+// anterior salen de config_mes.json. Nada garantiza que hablen del mismo mes:
+// el Action regenera el JSON cada 30 min con el mes en curso, así que correr
+// este script sin regenerar antes produce un deck rotulado con un mes y
+// graficado con otro — y no se nota, porque todos los rótulos son coherentes
+// entre sí. Abortamos antes de generar nada.
+{
+  const mesJSON   = datos.trayectoria_mes_actual.mes;
+  const mesConfig = config.mes;
+  const label     = config.presentacion.mes_label;
+  const errores = [];
+
+  if (mesJSON !== mesConfig) {
+    errores.push(`config_mes.json dice "${mesConfig}" pero docs/datos_presentacion.json tiene "${mesJSON}"`);
+  }
+  if (!label.startsWith(mesConfig) || !label.includes(String(config.año))) {
+    errores.push(`presentacion.mes_label es "${label}", no coincide con ${mesConfig} ${config.año}`);
+  }
+
+  if (errores.length > 0) {
+    const mm = MESES_NUM[mesConfig];
+    console.error("\n" + "═".repeat(70));
+    console.error("  DATOS Y RÓTULOS NO COINCIDEN — abortando generación");
+    console.error("═".repeat(70));
+    errores.forEach(e => console.error(`   - ${e}`));
+    console.error("\n  El deck saldría con el mes de un lado y los números del otro.");
+    console.error(`  Regenera los datos antes de generar la presentación:`);
+    console.error(`     python3.11 termometro.py --mes ${mm || "N"} --año ${config.año}`);
+    console.error("═".repeat(70) + "\n");
+    process.exit(1);
+  }
+}
+
 function leerTOEDesdeHTML(mes, año) {
   const mm = String(mes).padStart(2, "0");
   const filePath = path.join("docs", `termometro_${año}_${mm}.html`);
