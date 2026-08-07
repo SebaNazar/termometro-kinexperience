@@ -1,25 +1,25 @@
 {
   "potencial_total": 649.0,
-  "potencial_top": 65.0,
-  "toe_grupal": 10.02,
-  "top_grupal": 10.02,
+  "potencial_top": 69.0,
+  "toe_grupal": 10.32,
+  "top_grupal": 10.63,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 10.02
+    "toe": 10.32
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 12,
       "evaluaciones": 0,
-      "realizadas": 17,
-      "efectivas": 17.0,
-      "suspendidas": 1,
+      "realizadas": 19,
+      "efectivas": 19.0,
+      "suspendidas": 3,
       "recuperadas": 0,
-      "canceladas": 1,
-      "top": 16.36,
-      "toe": 15.45,
-      "tendencia": "↓"
+      "canceladas": 3,
+      "top": 20.0,
+      "toe": 17.27,
+      "tendencia": "→"
     },
     {
       "nombre": "Katalina Correa",
