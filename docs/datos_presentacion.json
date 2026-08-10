@@ -1,24 +1,24 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 122.0,
-  "toe_grupal": 15.02,
-  "top_grupal": 16.07,
+  "potencial_top": 124.5,
+  "toe_grupal": 15.35,
+  "top_grupal": 16.4,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 15.02
+    "toe": 15.35
   },
   "kines": [
     {
       "nombre": "Patricio Orrego",
       "pacientes": 12,
       "evaluaciones": 0,
-      "realizadas": 6,
-      "efectivas": 21.0,
+      "realizadas": 7,
+      "efectivas": 23.5,
       "suspendidas": 3,
       "recuperadas": 0,
       "canceladas": 3,
-      "top": 24.24,
-      "toe": 21.21,
+      "top": 26.77,
+      "toe": 23.74,
       "tendencia": "↓"
     },
     {
