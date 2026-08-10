@@ -1,13 +1,39 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 106.0,
-  "toe_grupal": 13.31,
-  "top_grupal": 13.97,
+  "potencial_top": 113.0,
+  "toe_grupal": 14.23,
+  "top_grupal": 14.89,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 13.31
+    "toe": 14.23
   },
   "kines": [
+    {
+      "nombre": "José Aguilar",
+      "pacientes": 12,
+      "evaluaciones": 0,
+      "realizadas": 24,
+      "efectivas": 24.0,
+      "suspendidas": 3,
+      "recuperadas": 0,
+      "canceladas": 3,
+      "top": 24.55,
+      "toe": 21.82,
+      "tendencia": "↑"
+    },
+    {
+      "nombre": "Katalina Correa",
+      "pacientes": 13,
+      "evaluaciones": 0,
+      "realizadas": 20,
+      "efectivas": 20.0,
+      "suspendidas": 2,
+      "recuperadas": 0,
+      "canceladas": 2,
+      "top": 20.0,
+      "toe": 18.18,
+      "tendencia": "↓"
+    },
     {
       "nombre": "Patricio Orrego",
       "pacientes": 12,
@@ -35,42 +61,16 @@
       "tendencia": "↓"
     },
     {
-      "nombre": "José Aguilar",
-      "pacientes": 12,
-      "evaluaciones": 0,
-      "realizadas": 19,
-      "efectivas": 19.0,
-      "suspendidas": 3,
-      "recuperadas": 0,
-      "canceladas": 3,
-      "top": 20.0,
-      "toe": 17.27,
-      "tendencia": "→"
-    },
-    {
-      "nombre": "Katalina Correa",
-      "pacientes": 13,
-      "evaluaciones": 0,
-      "realizadas": 19,
-      "efectivas": 19.0,
-      "suspendidas": 2,
-      "recuperadas": 0,
-      "canceladas": 2,
-      "top": 19.09,
-      "toe": 17.27,
-      "tendencia": "↓"
-    },
-    {
       "nombre": "Marcia Reveco",
       "pacientes": 8,
       "evaluaciones": 1,
-      "realizadas": 13,
-      "efectivas": 14.0,
+      "realizadas": 14,
+      "efectivas": 15.0,
       "suspendidas": 1,
       "recuperadas": 0,
       "canceladas": 1,
-      "top": 13.64,
-      "toe": 12.73,
+      "top": 14.55,
+      "toe": 13.64,
       "tendencia": "↓"
     },
     {
