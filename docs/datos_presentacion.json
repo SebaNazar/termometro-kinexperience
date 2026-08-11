@@ -1,11 +1,11 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 145.5,
-  "toe_grupal": 18.25,
-  "top_grupal": 19.17,
+  "potencial_top": 148.5,
+  "toe_grupal": 18.64,
+  "top_grupal": 19.57,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 18.25
+    "toe": 18.64
   },
   "kines": [
     {
@@ -38,27 +38,27 @@
       "nombre": "Katalina Correa",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 24,
-      "efectivas": 24.0,
+      "realizadas": 26,
+      "efectivas": 26.0,
       "suspendidas": 2,
       "recuperadas": 0,
       "canceladas": 2,
-      "top": 23.64,
-      "toe": 21.82,
+      "top": 25.45,
+      "toe": 23.64,
       "tendencia": "↓"
     },
     {
       "nombre": "Marcia Reveco",
       "pacientes": 10,
       "evaluaciones": 1,
-      "realizadas": 20,
-      "efectivas": 22.0,
+      "realizadas": 21,
+      "efectivas": 23.0,
       "suspendidas": 3,
       "recuperadas": 1,
       "canceladas": 2,
-      "top": 21.82,
-      "toe": 20.0,
-      "tendencia": "→"
+      "top": 22.73,
+      "toe": 20.91,
+      "tendencia": "↑"
     },
     {
       "nombre": "Guillermo Silva",
