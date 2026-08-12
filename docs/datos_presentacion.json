@@ -1,24 +1,24 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 160.5,
-  "toe_grupal": 20.22,
-  "top_grupal": 21.15,
+  "potencial_top": 162.5,
+  "toe_grupal": 20.49,
+  "top_grupal": 21.41,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 20.22
+    "toe": 20.49
   },
   "kines": [
     {
       "nombre": "Katalina Correa",
       "pacientes": 14,
       "evaluaciones": 1,
-      "realizadas": 28,
-      "efectivas": 29.0,
+      "realizadas": 29,
+      "efectivas": 30.0,
       "suspendidas": 2,
       "recuperadas": 0,
       "canceladas": 2,
-      "top": 28.18,
-      "toe": 26.36,
+      "top": 29.09,
+      "toe": 27.27,
       "tendencia": "↓"
     },
     {
@@ -51,13 +51,13 @@
       "nombre": "Marcia Reveco",
       "pacientes": 11,
       "evaluaciones": 1,
-      "realizadas": 23,
-      "efectivas": 25.0,
+      "realizadas": 24,
+      "efectivas": 26.0,
       "suspendidas": 4,
       "recuperadas": 1,
       "canceladas": 3,
-      "top": 25.45,
-      "toe": 22.73,
+      "top": 26.36,
+      "toe": 23.64,
       "tendencia": "↑"
     },
     {
