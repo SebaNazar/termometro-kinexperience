@@ -1,11 +1,11 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 155.5,
-  "toe_grupal": 19.57,
-  "top_grupal": 20.49,
+  "potencial_top": 160.5,
+  "toe_grupal": 20.22,
+  "top_grupal": 21.15,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 19.57
+    "toe": 20.22
   },
   "kines": [
     {
@@ -61,6 +61,19 @@
       "tendencia": "↑"
     },
     {
+      "nombre": "Sebastián de la Peña",
+      "pacientes": 7,
+      "evaluaciones": 0,
+      "realizadas": 12,
+      "efectivas": 20.5,
+      "suspendidas": 0,
+      "recuperadas": 1,
+      "canceladas": -1,
+      "top": 17.73,
+      "toe": 18.64,
+      "tendencia": "↓"
+    },
+    {
       "nombre": "Guillermo Silva",
       "pacientes": 13,
       "evaluaciones": 1,
@@ -71,19 +84,6 @@
       "canceladas": 0,
       "top": 17.73,
       "toe": 17.73,
-      "tendencia": "↓"
-    },
-    {
-      "nombre": "Sebastián de la Peña",
-      "pacientes": 7,
-      "evaluaciones": 0,
-      "realizadas": 10,
-      "efectivas": 15.5,
-      "suspendidas": 0,
-      "recuperadas": 1,
-      "canceladas": -1,
-      "top": 13.18,
-      "toe": 14.09,
       "tendencia": "↓"
     },
     {
