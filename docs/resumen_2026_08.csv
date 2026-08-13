@@ -1,9 +1,9 @@
 ﻿kine,pacientes_unicos,evaluaciones,realizadas,suspendidas,recuperadas,canceladas_real,grupales,efectivas,programadas,capacidad,TOP_individual,TOE_individual,ratio_efectividad
-Fernanda Pino,3,0,3,0,3,-3,0,6.0,3.0,110.0,0.0273,0.0545,2.0
-José Aguilar,12,0,31,4,1,3,0,32.0,35.0,110.0,0.3182,0.2909,0.9143
+Fernanda Pino,4,1,4,0,6,-6,0,11.0,5.0,110.0,0.0455,0.1,2.2
+José Aguilar,12,0,36,4,1,3,0,37.0,40.0,110.0,0.3636,0.3364,0.925
 Katalina Correa,14,1,31,2,0,2,0,32.0,34.0,110.0,0.3091,0.2909,0.9412
 Macarena Núñez,2,0,4,0,0,0,0,4.0,4.0,110.0,0.0364,0.0364,1.0
-Marcia Reveco,11,1,26,4,1,3,0,28.0,31.0,110.0,0.2818,0.2545,0.9032
+Marcia Reveco,11,1,27,4,1,3,0,29.0,32.0,110.0,0.2909,0.2636,0.9062
 Patricio Orrego,12,0,10,3,1,2,12,29.0,31.0,99.0,0.3131,0.2929,0.9355
-Sebastián de la Peña,7,0,12,0,1,-1,5,20.5,19.5,110.0,0.1773,0.1864,1.0513
+Sebastián de la Peña,7,0,12,2,1,1,6,22.0,23.0,110.0,0.2091,0.2,0.9565
 Guillermo Silva,13,1,16,1,1,0,1,19.5,19.5,110.0,0.1773,0.1773,1.0
