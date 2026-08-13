@@ -1,11 +1,11 @@
 {
   "potencial_total": 759.0,
-  "potencial_top": 193.5,
-  "toe_grupal": 24.7,
-  "top_grupal": 25.49,
+  "potencial_top": 194.5,
+  "toe_grupal": 24.84,
+  "top_grupal": 25.63,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 24.7
+    "toe": 24.84
   },
   "kines": [
     {
@@ -51,13 +51,13 @@
       "nombre": "Marcia Reveco",
       "pacientes": 11,
       "evaluaciones": 1,
-      "realizadas": 30,
-      "efectivas": 32.0,
+      "realizadas": 31,
+      "efectivas": 33.0,
       "suspendidas": 4,
       "recuperadas": 1,
       "canceladas": 3,
-      "top": 31.82,
-      "toe": 29.09,
+      "top": 32.73,
+      "toe": 30.0,
       "tendencia": "↑"
     },
     {
