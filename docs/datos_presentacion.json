@@ -1,11 +1,11 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 293.5,
-  "toe_grupal": 28.04,
-  "top_grupal": 29.98,
+  "potencial_top": 298.5,
+  "toe_grupal": 28.55,
+  "top_grupal": 30.49,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 28.04
+    "toe": 28.55
   },
   "kines": [
     {
@@ -51,13 +51,13 @@
       "nombre": "Marcia Reveco",
       "pacientes": 12,
       "evaluaciones": 1,
-      "realizadas": 33,
-      "efectivas": 36.5,
+      "realizadas": 34,
+      "efectivas": 37.5,
       "suspendidas": 4,
       "recuperadas": 1,
       "canceladas": 3,
-      "top": 35.91,
-      "toe": 33.18,
+      "top": 36.82,
+      "toe": 34.09,
       "tendencia": "↑"
     },
     {
@@ -77,13 +77,13 @@
       "nombre": "Francisca Campos",
       "pacientes": 8,
       "evaluaciones": 0,
-      "realizadas": 29,
-      "efectivas": 29.0,
+      "realizadas": 33,
+      "efectivas": 33.0,
       "suspendidas": 4,
       "recuperadas": 0,
       "canceladas": 4,
-      "top": 30.0,
-      "toe": 26.36,
+      "top": 33.64,
+      "toe": 30.0,
       "tendencia": "↓"
     },
     {
