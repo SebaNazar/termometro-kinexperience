@@ -1,11 +1,11 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 330.0,
-  "toe_grupal": 31.77,
-  "top_grupal": 33.71,
+  "potencial_top": 331.0,
+  "toe_grupal": 31.87,
+  "top_grupal": 33.81,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 31.77
+    "toe": 31.87
   },
   "kines": [
     {
@@ -25,13 +25,13 @@
       "nombre": "Katalina Correa",
       "pacientes": 15,
       "evaluaciones": 2,
-      "realizadas": 51,
-      "efectivas": 53.0,
+      "realizadas": 52,
+      "efectivas": 54.0,
       "suspendidas": 2,
       "recuperadas": 0,
       "canceladas": 2,
-      "top": 50.0,
-      "toe": 48.18,
+      "top": 50.91,
+      "toe": 49.09,
       "tendencia": "↓"
     },
     {
