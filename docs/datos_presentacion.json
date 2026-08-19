@@ -1,13 +1,26 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 325.0,
-  "toe_grupal": 31.26,
-  "top_grupal": 33.2,
+  "potencial_top": 328.0,
+  "toe_grupal": 31.56,
+  "top_grupal": 33.5,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 31.26
+    "toe": 31.56
   },
   "kines": [
+    {
+      "nombre": "José Aguilar",
+      "pacientes": 12,
+      "evaluaciones": 0,
+      "realizadas": 53,
+      "efectivas": 54.0,
+      "suspendidas": 4,
+      "recuperadas": 1,
+      "canceladas": 3,
+      "top": 51.82,
+      "toe": 49.09,
+      "tendencia": "↑"
+    },
     {
       "nombre": "Katalina Correa",
       "pacientes": 15,
@@ -20,19 +33,6 @@
       "top": 49.09,
       "toe": 47.27,
       "tendencia": "↓"
-    },
-    {
-      "nombre": "José Aguilar",
-      "pacientes": 12,
-      "evaluaciones": 0,
-      "realizadas": 50,
-      "efectivas": 51.0,
-      "suspendidas": 4,
-      "recuperadas": 1,
-      "canceladas": 3,
-      "top": 49.09,
-      "toe": 46.36,
-      "tendencia": "↑"
     },
     {
       "nombre": "Patricio Orrego",
