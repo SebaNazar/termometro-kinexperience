@@ -1,11 +1,11 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 389.0,
-  "toe_grupal": 37.69,
-  "top_grupal": 39.73,
+  "potencial_top": 391.0,
+  "toe_grupal": 38.0,
+  "top_grupal": 39.94,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 37.69
+    "toe": 38.0
   },
   "kines": [
     {
@@ -103,13 +103,13 @@
       "nombre": "Fernanda Pino",
       "pacientes": 4,
       "evaluaciones": 1,
-      "realizadas": 10,
-      "efectivas": 19.0,
+      "realizadas": 12,
+      "efectivas": 22.0,
       "suspendidas": 0,
-      "recuperadas": 8,
-      "canceladas": -8,
-      "top": 10.0,
-      "toe": 17.27,
+      "recuperadas": 9,
+      "canceladas": -9,
+      "top": 11.82,
+      "toe": 20.0,
       "tendencia": "↓"
     },
     {
