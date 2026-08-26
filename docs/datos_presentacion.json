@@ -1,13 +1,26 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 423.5,
-  "toe_grupal": 41.22,
-  "top_grupal": 43.26,
+  "potencial_top": 426.5,
+  "toe_grupal": 41.52,
+  "top_grupal": 43.56,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 41.22
+    "toe": 41.52
   },
   "kines": [
+    {
+      "nombre": "Katalina Correa",
+      "pacientes": 15,
+      "evaluaciones": 2,
+      "realizadas": 72,
+      "efectivas": 74.0,
+      "suspendidas": 3,
+      "recuperadas": 0,
+      "canceladas": 3,
+      "top": 70.0,
+      "toe": 67.27,
+      "tendencia": "↓"
+    },
     {
       "nombre": "José Aguilar",
       "pacientes": 12,
@@ -20,19 +33,6 @@
       "top": 69.09,
       "toe": 65.45,
       "tendencia": "↑"
-    },
-    {
-      "nombre": "Katalina Correa",
-      "pacientes": 15,
-      "evaluaciones": 2,
-      "realizadas": 69,
-      "efectivas": 71.0,
-      "suspendidas": 3,
-      "recuperadas": 0,
-      "canceladas": 3,
-      "top": 67.27,
-      "toe": 64.55,
-      "tendencia": "↓"
     },
     {
       "nombre": "Guillermo Silva",
