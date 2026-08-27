@@ -1,11 +1,11 @@
 {
   "potencial_total": 979.0,
-  "potencial_top": 432.0,
-  "toe_grupal": 42.08,
-  "top_grupal": 44.13,
+  "potencial_top": 442.0,
+  "toe_grupal": 42.49,
+  "top_grupal": 45.15,
   "trayectoria_mes_actual": {
     "mes": "Agosto",
-    "toe": 42.08
+    "toe": 42.49
   },
   "kines": [
     {
@@ -35,6 +35,19 @@
       "tendencia": "↓"
     },
     {
+      "nombre": "Guillermo Silva",
+      "pacientes": 13,
+      "evaluaciones": 1,
+      "realizadas": 49,
+      "efectivas": 56.0,
+      "suspendidas": 12,
+      "recuperadas": 3,
+      "canceladas": 9,
+      "top": 59.09,
+      "toe": 50.91,
+      "tendencia": "↓"
+    },
+    {
       "nombre": "Marcia Reveco",
       "pacientes": 14,
       "evaluaciones": 1,
@@ -46,19 +59,6 @@
       "top": 50.45,
       "toe": 47.73,
       "tendencia": "↑"
-    },
-    {
-      "nombre": "Guillermo Silva",
-      "pacientes": 13,
-      "evaluaciones": 1,
-      "realizadas": 45,
-      "efectivas": 52.0,
-      "suspendidas": 6,
-      "recuperadas": 3,
-      "canceladas": 3,
-      "top": 50.0,
-      "toe": 47.27,
-      "tendencia": "↓"
     },
     {
       "nombre": "Patricio Orrego",
