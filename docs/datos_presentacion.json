@@ -1,11 +1,11 @@
 {
-  "potencial_total": 514.5,
-  "potencial_top": 29.0,
-  "toe_grupal": 4.86,
-  "top_grupal": 5.64,
+  "potencial_total": 619.5,
+  "potencial_top": 32.0,
+  "toe_grupal": 4.52,
+  "top_grupal": 5.17,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 4.86
+    "toe": 4.52
   },
   "kines": [
     {
@@ -36,15 +36,15 @@
     },
     {
       "nombre": "Marcia Reveco",
-      "pacientes": 5,
-      "evaluaciones": 0,
+      "pacientes": 6,
+      "evaluaciones": 1,
       "realizadas": 4,
-      "efectivas": 5.5,
+      "efectivas": 6.5,
       "suspendidas": 0,
       "recuperadas": 0,
       "canceladas": 0,
-      "top": 5.24,
-      "toe": 5.24,
+      "top": 6.19,
+      "toe": 6.19,
       "tendencia": "↓"
     },
     {
@@ -70,6 +70,19 @@
       "recuperadas": 0,
       "canceladas": 2,
       "top": 3.81,
+      "toe": 1.9,
+      "tendencia": "↓"
+    },
+    {
+      "nombre": "Sebastián de la Peña",
+      "pacientes": 2,
+      "evaluaciones": 0,
+      "realizadas": 2,
+      "efectivas": 2.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 1.9,
       "toe": 1.9,
       "tendencia": "↓"
     }
