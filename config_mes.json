@@ -1,7 +1,7 @@
 {
-  "mes": "Julio",
+  "mes": "Agosto",
   "año": 2026,
-  "dias_habiles": 22,
+  "dias_habiles": 21,
   "kines_staff": [
     "Sebastián de la Peña",
     "Patricio Orrego",
@@ -26,16 +26,16 @@
   "excepciones_capacidad": {
     "Patricio Orrego": { "tipo": "porcentaje", "valor": 0.9 }
   },
-  "meta_TOE": 0.70,
-  "meta_TOP": 0.72,
+  "meta_TOE": 0.66,
+  "meta_TOP": 0.68,
   "notas_mes": "",
   "presentacion": {
-    "mes_label": "Julio 2026",
-    "frase_motivacional": "Juntos para arriba",
+    "mes_label": "Agosto 2026",
+    "frase_motivacional": "Seguir recuperando terreno",
     "meta_toe_siguiente": 66,
     "meta_top_siguiente": 68,
-    "meta_siguiente_nombre": "Agosto 2026",
-    "frase_meta_siguiente": "Seguir recuperando terreno"
+    "meta_siguiente_nombre": "Septiembre 2026",
+    "frase_meta_siguiente": "Flexibilizamos ahora, nos ajustamos despúes"
   },
   "pagos": {
     "rut_empresa": "77.036.223-7",
