@@ -1,11 +1,11 @@
 {
-  "potencial_total": 619.5,
-  "potencial_top": 32.0,
-  "toe_grupal": 4.52,
-  "top_grupal": 5.17,
+  "potencial_total": 724.5,
+  "potencial_top": 36.0,
+  "toe_grupal": 4.28,
+  "top_grupal": 4.97,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 4.52
+    "toe": 4.28
   },
   "kines": [
     {
@@ -61,15 +61,28 @@
       "tendencia": "↓"
     },
     {
+      "nombre": "Fernanda Pino",
+      "pacientes": 3,
+      "evaluaciones": 1,
+      "realizadas": 2,
+      "efectivas": 3.0,
+      "suspendidas": 0,
+      "recuperadas": 0,
+      "canceladas": 0,
+      "top": 2.86,
+      "toe": 2.86,
+      "tendencia": "↓"
+    },
+    {
       "nombre": "Daniela Jaque",
-      "pacientes": 4,
+      "pacientes": 5,
       "evaluaciones": 0,
       "realizadas": 2,
       "efectivas": 2.0,
-      "suspendidas": 2,
+      "suspendidas": 3,
       "recuperadas": 0,
-      "canceladas": 2,
-      "top": 3.81,
+      "canceladas": 3,
+      "top": 4.76,
       "toe": 1.9,
       "tendencia": "↓"
     },
