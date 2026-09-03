@@ -45,7 +45,7 @@
     "porcentaje_boleta_honorarios": 0.1525,
     "trimestre_actual": "T3-2026",
     "mes_cierre_trimestre": "Agosto",
-    "toe_grupal_meses_trimestre": [0.0, 0.0, 0.0],
+    "toe_grupal_meses_trimestre": [0.650, 0.545, 0.0],
     "perfiles_especiales": {
       "Patricio Orrego": {
         "perfil": "kine_antiguo",
