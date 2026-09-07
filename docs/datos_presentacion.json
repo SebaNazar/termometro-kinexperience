@@ -1,24 +1,24 @@
 {
-  "potencial_total": 829.5,
-  "potencial_top": 62.0,
-  "toe_grupal": 7.23,
-  "top_grupal": 7.47,
+  "potencial_total": 934.5,
+  "potencial_top": 78.0,
+  "toe_grupal": 8.24,
+  "top_grupal": 8.35,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 7.23
+    "toe": 8.24
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 12,
       "evaluaciones": 0,
-      "realizadas": 16,
-      "efectivas": 16.0,
+      "realizadas": 21,
+      "efectivas": 21.0,
       "suspendidas": 1,
       "recuperadas": 0,
       "canceladas": 1,
-      "top": 16.19,
-      "toe": 15.24,
+      "top": 20.95,
+      "toe": 20.0,
       "tendencia": "↓"
     },
     {
@@ -32,6 +32,19 @@
       "canceladas": -3,
       "top": 12.38,
       "toe": 15.24,
+      "tendencia": "↓"
+    },
+    {
+      "nombre": "Francisca Campos",
+      "pacientes": 7,
+      "evaluaciones": 2,
+      "realizadas": 9,
+      "efectivas": 12.0,
+      "suspendidas": 0,
+      "recuperadas": 1,
+      "canceladas": -1,
+      "top": 10.48,
+      "toe": 11.43,
       "tendencia": "↓"
     },
     {
