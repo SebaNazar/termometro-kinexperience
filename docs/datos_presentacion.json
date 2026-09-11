@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 106.0,
-  "toe_grupal": 11.13,
-  "top_grupal": 11.34,
+  "potencial_top": 118.5,
+  "toe_grupal": 12.47,
+  "top_grupal": 12.68,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 11.13
+    "toe": 12.47
   },
   "kines": [
     {
@@ -23,15 +23,15 @@
     },
     {
       "nombre": "Guillermo Silva",
-      "pacientes": 8,
+      "pacientes": 10,
       "evaluaciones": 0,
-      "realizadas": 13,
-      "efectivas": 16.0,
-      "suspendidas": 0,
-      "recuperadas": 3,
+      "realizadas": 23,
+      "efectivas": 28.5,
+      "suspendidas": 1,
+      "recuperadas": 4,
       "canceladas": -3,
-      "top": 12.38,
-      "toe": 15.24,
+      "top": 24.29,
+      "toe": 27.14,
       "tendencia": "↓"
     },
     {
