@@ -1,8 +1,8 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 169.5,
+  "potencial_top": 170.5,
   "toe_grupal": 17.92,
-  "top_grupal": 18.14,
+  "top_grupal": 18.25,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
     "toe": 17.92
@@ -27,10 +27,10 @@
       "evaluaciones": 2,
       "realizadas": 29,
       "efectivas": 37.0,
-      "suspendidas": 9,
+      "suspendidas": 10,
       "recuperadas": 6,
-      "canceladas": 3,
-      "top": 38.1,
+      "canceladas": 4,
+      "top": 39.05,
       "toe": 35.24,
       "tendencia": "↓"
     },
