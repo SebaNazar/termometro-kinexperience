@@ -1,37 +1,37 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 170.5,
-  "toe_grupal": 17.92,
-  "top_grupal": 18.25,
+  "potencial_top": 174.5,
+  "toe_grupal": 18.35,
+  "top_grupal": 18.67,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 17.92
+    "toe": 18.35
   },
   "kines": [
     {
       "nombre": "José Aguilar",
       "pacientes": 13,
       "evaluaciones": 0,
-      "realizadas": 55,
-      "efectivas": 55.0,
+      "realizadas": 58,
+      "efectivas": 58.0,
       "suspendidas": 2,
       "recuperadas": 0,
       "canceladas": 2,
-      "top": 54.29,
-      "toe": 52.38,
+      "top": 57.14,
+      "toe": 55.24,
       "tendencia": "↓"
     },
     {
       "nombre": "Daniela Jaque",
       "pacientes": 12,
       "evaluaciones": 2,
-      "realizadas": 29,
-      "efectivas": 37.0,
+      "realizadas": 30,
+      "efectivas": 38.0,
       "suspendidas": 10,
       "recuperadas": 6,
       "canceladas": 4,
-      "top": 39.05,
-      "toe": 35.24,
+      "top": 40.0,
+      "toe": 36.19,
       "tendencia": "↓"
     },
     {
