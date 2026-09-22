@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 174.5,
-  "toe_grupal": 18.35,
-  "top_grupal": 18.67,
+  "potencial_top": 175.5,
+  "toe_grupal": 18.46,
+  "top_grupal": 18.78,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 18.35
+    "toe": 18.46
   },
   "kines": [
     {
@@ -25,13 +25,13 @@
       "nombre": "Daniela Jaque",
       "pacientes": 12,
       "evaluaciones": 2,
-      "realizadas": 30,
-      "efectivas": 38.0,
+      "realizadas": 31,
+      "efectivas": 39.0,
       "suspendidas": 10,
       "recuperadas": 6,
       "canceladas": 4,
-      "top": 40.0,
-      "toe": 36.19,
+      "top": 40.95,
+      "toe": 37.14,
       "tendencia": "↓"
     },
     {
