@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 184.5,
-  "toe_grupal": 19.42,
-  "top_grupal": 19.74,
+  "potencial_top": 188.5,
+  "toe_grupal": 19.85,
+  "top_grupal": 20.17,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 19.42
+    "toe": 19.85
   },
   "kines": [
     {
@@ -25,14 +25,14 @@
       "nombre": "Daniela Jaque",
       "pacientes": 12,
       "evaluaciones": 2,
-      "realizadas": 34,
-      "efectivas": 42.0,
+      "realizadas": 38,
+      "efectivas": 46.0,
       "suspendidas": 10,
       "recuperadas": 6,
       "canceladas": 4,
-      "top": 43.81,
-      "toe": 40.0,
-      "tendencia": "↓"
+      "top": 47.62,
+      "toe": 43.81,
+      "tendencia": "→"
     },
     {
       "nombre": "Guillermo Silva",
