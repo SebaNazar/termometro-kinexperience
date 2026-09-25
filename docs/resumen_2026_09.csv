@@ -1,7 +1,7 @@
 ﻿kine,pacientes_unicos,evaluaciones,realizadas,suspendidas,recuperadas,canceladas_real,grupales,efectivas,programadas,capacidad,TOP_individual,TOE_individual,ratio_efectividad
 Sebastián de la Peña,2,0,2,0,0,0,0,2.0,2.0,105.0,0.019,0.019,1.0
 Marcia Reveco,6,1,5,0,0,0,1,7.5,7.5,105.0,0.0714,0.0714,1.0
-José Aguilar,13,0,64,2,0,2,0,64.0,66.0,105.0,0.6286,0.6095,0.9697
+José Aguilar,13,0,68,2,1,1,0,69.0,70.0,105.0,0.6667,0.6571,0.9857
 Daniela Jaque,12,2,38,10,6,4,0,46.0,50.0,105.0,0.4762,0.4381,0.92
 Katalina Correa,8,0,7,1,0,1,0,7.0,8.0,105.0,0.0762,0.0667,0.875
 Patricio Orrego,3,0,2,0,0,0,1,3.5,3.5,94.5,0.037,0.037,1.0
