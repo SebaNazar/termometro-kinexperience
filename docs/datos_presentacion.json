@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 192.5,
-  "toe_grupal": 20.39,
-  "top_grupal": 20.6,
+  "potencial_top": 226.5,
+  "toe_grupal": 23.6,
+  "top_grupal": 24.24,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 20.39
+    "toe": 23.6
   },
   "kines": [
     {
@@ -22,6 +22,19 @@
       "tendencia": "↓"
     },
     {
+      "nombre": "Guillermo Silva",
+      "pacientes": 12,
+      "evaluaciones": 2,
+      "realizadas": 52,
+      "efectivas": 64.5,
+      "suspendidas": 7,
+      "recuperadas": 6,
+      "canceladas": 1,
+      "top": 62.38,
+      "toe": 61.43,
+      "tendencia": "→"
+    },
+    {
       "nombre": "Daniela Jaque",
       "pacientes": 12,
       "evaluaciones": 2,
@@ -33,19 +46,6 @@
       "top": 47.62,
       "toe": 43.81,
       "tendencia": "→"
-    },
-    {
-      "nombre": "Guillermo Silva",
-      "pacientes": 10,
-      "evaluaciones": 0,
-      "realizadas": 29,
-      "efectivas": 34.5,
-      "suspendidas": 1,
-      "recuperadas": 4,
-      "canceladas": -3,
-      "top": 30.0,
-      "toe": 32.86,
-      "tendencia": "↓"
     },
     {
       "nombre": "Francisca Campos",
