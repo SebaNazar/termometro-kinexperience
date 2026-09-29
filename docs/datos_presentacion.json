@@ -1,11 +1,11 @@
 {
   "potencial_total": 934.5,
-  "potencial_top": 234.5,
-  "toe_grupal": 24.45,
-  "top_grupal": 25.09,
+  "potencial_top": 247.5,
+  "toe_grupal": 25.84,
+  "top_grupal": 26.48,
   "trayectoria_mes_actual": {
     "mes": "Septiembre",
-    "toe": 24.45
+    "toe": 25.84
   },
   "kines": [
     {
@@ -36,16 +36,16 @@
     },
     {
       "nombre": "Daniela Jaque",
-      "pacientes": 12,
-      "evaluaciones": 2,
-      "realizadas": 38,
-      "efectivas": 46.0,
+      "pacientes": 14,
+      "evaluaciones": 3,
+      "realizadas": 50,
+      "efectivas": 59.0,
       "suspendidas": 10,
       "recuperadas": 6,
       "canceladas": 4,
-      "top": 47.62,
-      "toe": 43.81,
-      "tendencia": "→"
+      "top": 60.0,
+      "toe": 56.19,
+      "tendencia": "↑"
     },
     {
       "nombre": "Francisca Campos",
